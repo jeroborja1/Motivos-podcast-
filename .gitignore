@@ -5,3 +5,6 @@ node_modules/
 
 # Archivo de imagen roto (28 bytes, contiene texto de error, no es un PNG real)
 screen.png
+
+.vercel
+.env*
