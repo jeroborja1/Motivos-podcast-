@@ -24,3 +24,5 @@ Google Fonts e imágenes remotas (requiere conexión a internet).
 ## Publicación
 
 Desplegado como sitio estático en **Vercel**. Cada push a `main` genera un nuevo despliegue.
+
+<!-- deploy auto activo -->
