@@ -1,0 +1,7 @@
+node_modules/
+.vercel/
+.DS_Store
+*.log
+
+# Archivo de imagen roto (28 bytes, contiene texto de error, no es un PNG real)
+screen.png
