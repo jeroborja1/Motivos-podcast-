@@ -285,7 +285,7 @@ tailwind.config = {
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-arena pb-6">
 <div>
 <span class="text-xs font-bold uppercase tracking-widest text-ocre">Temporada de Estreno • Temporada 01</span>
-<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-normal">Capítulos Recientes</h2>
+<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-bold">Capítulos Recientes</h2>
 </div>
 <!-- Píldoras de filtro con acento Ocre y Petróleo -->
 <div class="flex flex-wrap items-center gap-2">
@@ -299,104 +299,93 @@ tailwind.config = {
 <div class="w-full rounded-2xl overflow-hidden shadow-lg border border-arena bg-petroleo">
 <iframe allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" allowfullscreen="" frameborder="0" height="232" loading="lazy" src="https://open.spotify.com/embed/show/3bzIpZowzU4c7jZOxtz2AS?utm_source=generator&amp;theme=0" style="border-radius:12px;" width="100%"></iframe>
 </div>
-<!-- Grid de episodios con fotos reales integradas -->
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Episodio 1: Wyll https://lh3.googleusercontent.com/aida-public/AB6AXuCU4zhtm7sT3orX4lcYVPfmep-6uxKpC74tK9mwGorkMVAhWKGSdUbdl5IuM1U-boGfaj2lM2g2328COYmAv_9sDppREdqSIzAwNWLORG8GTsvyN4kZ-NCj5-72yjpXKAGGXam-nea_aElh6BxVIQknza-3yIGCbLyxw7grX_GzQZwlcZKBQNiQCtWhzoLG5jUxAK2RDdF6eRO6TLZvwCr7FCj-AqelhuyMjLhyTCLmsIJDg7AlZpJYf5BkDbPzBoDD08w -->
+<!-- Grid de episodios (4 columnas, foto B/N -> color al hover, título con realce) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-arena flex flex-col group">
-<div class="relative aspect-video overflow-hidden bg-petroleo">
-<img alt="Wyll en el estudio Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOemtLJee_SUNRHSbVHlvxQ4P5a2grxhbmL0nnS-dJuLEFM493a5ZXmiDMfmcOkj2DwIx7wOam_ZeK-h-9zkoAjTJaU_T1sP-izIpRg-ppk1CBfdHbxv3ZLJY_6OrxPKjJON4xm4rT0SE-jO1zb-Tjk16EYgDqqbNgdhjZrgILITIIJKZgsSBDWzUFTJW7IAAXcLqzOib--lzBwGVILyNOltngOl67pSm7NT3d0-M-etmgC5w3CoTP26xCgxN2Ca2IA_CKoE4ssWiq_ks">
-<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-petroleo/90 text-menta font-satoshi text-[11px] font-bold tracking-wider uppercase">Wyll</span>
-
+<div class="relative aspect-[4/3] overflow-hidden bg-petroleo">
+<img alt="Wyll en el estudio de Motivos Podcast" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOemtLJee_SUNRHSbVHlvxQ4P5a2grxhbmL0nnS-dJuLEFM493a5ZXmiDMfmcOkj2DwIx7wOam_ZeK-h-9zkoAjTJaU_T1sP-izIpRg-ppk1CBfdHbxv3ZLJY_6OrxPKjJON4xm4rT0SE-jO1zb-Tjk16EYgDqqbNgdhjZrgILITIIJKZgsSBDWzUFTJW7IAAXcLqzOib--lzBwGVILyNOltngOl67pSm7NT3d0-M-etmgC5w3CoTP26xCgxN2Ca2IA_CKoE4ssWiq_ks" loading="lazy">
+<div class="absolute inset-0 bg-ocre/25 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-petroleo/60 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-petroleo/90 text-menta font-satoshi text-[10px] font-bold tracking-wider uppercase">Wyll</span>
 </div>
-<div class="p-6 flex-1 flex flex-col justify-between gap-4">
+<div class="p-5 flex-1 flex flex-col justify-between gap-3">
 <div>
-<span class="text-[11px] uppercase tracking-wider font-bold text-ocre">Superación &amp; Vocación</span>
-<h3 class="font-satoshi text-xl font-semibold text-petroleo mt-1 group-hover:text-ocre transition-colors leading-snug">
-              Wyll: 5 años en el monte sin cantar, hasta que un general lo escuchó
-            </h3>
-<p class="text-xs text-oliva mt-2 line-clamp-3 leading-relaxed">
-              Dejó el micrófono por el uniforme como comandante de explosivos del Ejército. Una historia desgarradora de perdón a un padre, reconciliación y resurrección artística.
-            </p>
+<span class="text-[10px] uppercase tracking-wider font-bold text-ocre">Superación &amp; Vocación</span>
+<h3 class="mt-2 leading-relaxed">
+<span class="font-satoshi text-[15px] font-bold text-petroleo bg-ocre/15 box-decoration-clone px-1.5 py-0.5 group-hover:bg-ocre/25 transition-colors">Wyll: 5 años en el monte sin cantar, hasta que un general lo escuchó</span>
+</h3>
+<p class="text-xs text-oliva mt-3 line-clamp-2 leading-relaxed">Dejó el micrófono por el uniforme como comandante de explosivos del Ejército. Una historia de perdón a un padre, reconciliación y resurrección artística.</p>
 </div>
 <div class="pt-3 border-t border-arena/60 flex items-center justify-between">
 <a class="inline-flex items-center gap-1.5 text-xs font-bold text-petroleo hover:text-ocre transition-colors" href="https://open.spotify.com/episode/73MAJ3FytnmIRpMscjsXZX" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">play_circle</span> Escuchar
-            </a>
-<div class="flex items-center gap-3 text-grafito/70">
-<a class="hover:text-ocre" href="https://open.spotify.com/episode/73MAJ3FytnmIRpMscjsXZX" rel="noopener noreferrer" target="_blank" title="Spotify">
-<span class="material-symbols-outlined text-[18px]">podcasts</span>
 </a>
-<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
-<span class="material-symbols-outlined text-[18px]">smart_display</span>
-</a>
+<div class="flex items-center gap-3 text-grafito/60">
+<a class="hover:text-ocre" href="https://open.spotify.com/episode/73MAJ3FytnmIRpMscjsXZX" rel="noopener noreferrer" target="_blank" title="Spotify"><span class="material-symbols-outlined text-[18px]">podcasts</span></a>
+<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube"><span class="material-symbols-outlined text-[18px]">smart_display</span></a>
 </div>
 </div>
 </div>
 </article>
-<!-- Episodio 2: Hilsen Durán https://lh3.googleusercontent.com/aida-public/AB6AXuBV5fCCN555EOOrN34WDlMRxK4Lzwi0iLJM27vJFX45oQGnpqCLfRQvLpQeqgpmsEFsnnovPDJkw_LJAAgNI7xlAP98JrIf2-XVGT1UWLpw01NcVBXpB2P1LTeh1dYG_aOZzokcHC4a3QTMO_5tKjVX8IzSvDjkdGICBDWs6GsH2QgWZMo2BHF_hT_kEpK33mp1qP6RwANI_WEDITnEsS2HEBNw2JQ2YHDFWRn44cIO3l47fUTfLcFbf4aw3347biQZLZk -->
 <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-arena flex flex-col group">
-<div class="relative aspect-video overflow-hidden bg-petroleo">
-<img alt="Entrevista en estudio exterior Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1xtOI_Q1iTylrLDoS_sjAMn9w8-hLhLCjVMD1vIOQ5K-C4rm3CW2OH-QatiCk4hZ519c3a6YMI55pQEucygjZ2j9I1e8K-o5KWBqg_v68yFUezG_ayRDhwVQAQuBwZkScO4UR_7A4z3wTzjyYPquaTd5B6Ip4F041GvEES2oxIQ1cX0j1Xt8ous0AAZgD2TsDhfcdDXyKsgZ8FLKi2UXZtSswZBaD3YNVeiqEh0vXQlu0EZCusAu9gKNDJ28iwx5wOymam2IB6_MjN_g">
-<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-petroleo/90 text-menta font-satoshi text-[11px] font-bold tracking-wider uppercase">Hilsen Durán</span>
-
+<div class="relative aspect-[4/3] overflow-hidden bg-petroleo">
+<img alt="Hilsen Durán en entrevista con Motivos Podcast" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1xtOI_Q1iTylrLDoS_sjAMn9w8-hLhLCjVMD1vIOQ5K-C4rm3CW2OH-QatiCk4hZ519c3a6YMI55pQEucygjZ2j9I1e8K-o5KWBqg_v68yFUezG_ayRDhwVQAQuBwZkScO4UR_7A4z3wTzjyYPquaTd5B6Ip4F041GvEES2oxIQ1cX0j1Xt8ous0AAZgD2TsDhfcdDXyKsgZ8FLKi2UXZtSswZBaD3YNVeiqEh0vXQlu0EZCusAu9gKNDJ28iwx5wOymam2IB6_MjN_g" loading="lazy">
+<div class="absolute inset-0 bg-ocre/25 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-petroleo/60 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-petroleo/90 text-menta font-satoshi text-[10px] font-bold tracking-wider uppercase">Hilsen Durán</span>
 </div>
-<div class="p-6 flex-1 flex flex-col justify-between gap-4">
+<div class="p-5 flex-1 flex flex-col justify-between gap-3">
 <div>
-<span class="text-[11px] uppercase tracking-wider font-bold text-ocre">Fe &amp; Vocación Militar</span>
-<h3 class="font-satoshi text-xl font-semibold text-petroleo mt-1 group-hover:text-ocre transition-colors leading-snug">
-              Cuidando heridos de guerra: "Un soldado soñaba ser artista, no guerrero"
-            </h3>
-<p class="text-xs text-oliva mt-2 line-clamp-3 leading-relaxed">
-              Enfermera jefe de la Clínica de Heridas del Hospital Militar Central. Testimonio de amor humanizado en los instantes en que la vida pende de un hilo.
-            </p>
+<span class="text-[10px] uppercase tracking-wider font-bold text-ocre">Fe &amp; Vocación Militar</span>
+<h3 class="mt-2 leading-relaxed">
+<span class="font-satoshi text-[15px] font-bold text-petroleo bg-ocre/15 box-decoration-clone px-1.5 py-0.5 group-hover:bg-ocre/25 transition-colors">Cuidando heridos de guerra: “Un soldado soñaba ser artista, no guerrero”</span>
+</h3>
+<p class="text-xs text-oliva mt-3 line-clamp-2 leading-relaxed">Enfermera jefe de la Clínica de Heridas del Hospital Militar Central. Testimonio de amor humanizado cuando la vida pende de un hilo.</p>
 </div>
 <div class="pt-3 border-t border-arena/60 flex items-center justify-between">
 <a class="inline-flex items-center gap-1.5 text-xs font-bold text-petroleo hover:text-ocre transition-colors" href="https://open.spotify.com/episode/3OtNIcga4Ozr0g7WSACBqC" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">play_circle</span> Escuchar
-            </a>
-<div class="flex items-center gap-3 text-grafito/70">
-<a class="hover:text-ocre" href="https://open.spotify.com/episode/3OtNIcga4Ozr0g7WSACBqC" rel="noopener noreferrer" target="_blank" title="Spotify">
-<span class="material-symbols-outlined text-[18px]">podcasts</span>
 </a>
-<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
-<span class="material-symbols-outlined text-[18px]">smart_display</span>
-</a>
+<div class="flex items-center gap-3 text-grafito/60">
+<a class="hover:text-ocre" href="https://open.spotify.com/episode/3OtNIcga4Ozr0g7WSACBqC" rel="noopener noreferrer" target="_blank" title="Spotify"><span class="material-symbols-outlined text-[18px]">podcasts</span></a>
+<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube"><span class="material-symbols-outlined text-[18px]">smart_display</span></a>
 </div>
 </div>
 </div>
 </article>
-<!-- Episodio 3: Conversación de estudio https://lh3.googleusercontent.com/aida-public/AB6AXuA2veDxs6YncLE45ipnhIBn6E1mMn4qPn5iWY-ndtw3yuYOLQQrsCTtL8zQ0qdf5U2oGkQ0DA9Ug-4WElyZg7c0iG2vh6ueCODZiwZkAoKRwINXMGUZBF99tqLGtp1hakiPROmkZy1hdcbEmLarXP8ul_NraS-5Kxtey5P2PXq_YIFZ9jLGuxqSOp46QOos7LNb8BPzaT2xEAkwe6r4wkJ9LmlM9KHS9TQ3eai_ElKsu-IhCFYDF0J8wnVobVX_jQn3juY -->
 <article class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-arena flex flex-col group">
-<div class="relative aspect-video overflow-hidden bg-petroleo">
-<img alt="Grabación de estudio Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSH4dmXNlFlJqq7Yc-c9iEgr50EVoaaFmHAjjY2Ocr_1IDXxCYGzhCSEqpRvuE09hGn5lVT-xkOLnAxJruyb7TGSL93328w1EBKfXyorH_WQqG_H0EhWPSvVcHnrrtIMz3nuayBtxHX-bYEvrNvS71juSlYW4dFXz4s9b0VuyU_Z2vPes_fcZYS9yph_v6b549kxMbwml98tLYbcQP-GKkRQlGWZFex-6GdVrORK4Q03Ao8DVham-7vpQZVRJyVBF_IQujMveMcu5y5Ck">
-<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-petroleo/90 text-menta font-satoshi text-[11px] font-bold tracking-wider uppercase">Experiencia Límite</span>
-
+<div class="relative aspect-[4/3] overflow-hidden bg-petroleo">
+<img alt="Grabación de estudio de Motivos Podcast" class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSH4dmXNlFlJqq7Yc-c9iEgr50EVoaaFmHAjjY2Ocr_1IDXxCYGzhCSEqpRvuE09hGn5lVT-xkOLnAxJruyb7TGSL93328w1EBKfXyorH_WQqG_H0EhWPSvVcHnrrtIMz3nuayBtxHX-bYEvrNvS71juSlYW4dFXz4s9b0VuyU_Z2vPes_fcZYS9yph_v6b549kxMbwml98tLYbcQP-GKkRQlGWZFex-6GdVrORK4Q03Ao8DVham-7vpQZVRJyVBF_IQujMveMcu5y5Ck" loading="lazy">
+<div class="absolute inset-0 bg-ocre/25 mix-blend-multiply opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-petroleo/60 to-transparent"></div>
+<span class="absolute top-3 left-3 px-2.5 py-1 rounded bg-petroleo/90 text-menta font-satoshi text-[10px] font-bold tracking-wider uppercase">Experiencia Límite</span>
 </div>
-<div class="p-6 flex-1 flex flex-col justify-between gap-4">
+<div class="p-5 flex-1 flex flex-col justify-between gap-3">
 <div>
-<span class="text-[11px] uppercase tracking-wider font-bold text-ocre">Milagros &amp; Resiliencia</span>
-<h3 class="font-satoshi text-xl font-semibold text-petroleo mt-1 group-hover:text-ocre transition-colors leading-snug">
-              "Un disparo, mi alma salió del cuerpo... y un desconocido me salvó"
-            </h3>
-<p class="text-xs text-oliva mt-2 line-clamp-3 leading-relaxed">
-              Un impacto en combate, una experiencia cercana a la muerte y la silla de ruedas que se convirtió en plataforma para levantar a miles de jóvenes.
-            </p>
+<span class="text-[10px] uppercase tracking-wider font-bold text-ocre">Milagros &amp; Resiliencia</span>
+<h3 class="mt-2 leading-relaxed">
+<span class="font-satoshi text-[15px] font-bold text-petroleo bg-ocre/15 box-decoration-clone px-1.5 py-0.5 group-hover:bg-ocre/25 transition-colors">“Un disparo, mi alma salió del cuerpo... y un desconocido me salvó”</span>
+</h3>
+<p class="text-xs text-oliva mt-3 line-clamp-2 leading-relaxed">Un impacto en combate, una experiencia cercana a la muerte y la silla de ruedas que se volvió plataforma para levantar a miles de jóvenes.</p>
 </div>
 <div class="pt-3 border-t border-arena/60 flex items-center justify-between">
 <a class="inline-flex items-center gap-1.5 text-xs font-bold text-petroleo hover:text-ocre transition-colors" href="https://open.spotify.com/episode/5qGaStyvbQdOZSeVL9eoMc" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">play_circle</span> Escuchar
-            </a>
-<div class="flex items-center gap-3 text-grafito/70">
-<a class="hover:text-ocre" href="https://open.spotify.com/episode/5qGaStyvbQdOZSeVL9eoMc" rel="noopener noreferrer" target="_blank" title="Spotify">
-<span class="material-symbols-outlined text-[18px]">podcasts</span>
 </a>
-<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
-<span class="material-symbols-outlined text-[18px]">smart_display</span>
-</a>
+<div class="flex items-center gap-3 text-grafito/60">
+<a class="hover:text-ocre" href="https://open.spotify.com/episode/5qGaStyvbQdOZSeVL9eoMc" rel="noopener noreferrer" target="_blank" title="Spotify"><span class="material-symbols-outlined text-[18px]">podcasts</span></a>
+<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube"><span class="material-symbols-outlined text-[18px]">smart_display</span></a>
 </div>
 </div>
 </div>
 </article>
+<!-- Tile: catálogo completo -->
+<a class="rounded-2xl border border-arena bg-petroleo text-blanco flex flex-col items-center justify-center text-center gap-3 p-6 hover:bg-petroleo-deep transition-colors group min-h-[220px]" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-menta text-[40px]">library_music</span>
+<span class="font-satoshi font-bold text-lg">Todo el catálogo</span>
+<span class="text-arena/80 text-xs">Cada episodio en Spotify y YouTube</span>
+<span class="material-symbols-outlined text-menta text-[20px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
 </div>
 <!-- Ver todos los episodios -->
 <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-6">
