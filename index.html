@@ -5,7 +5,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
 <style>
   @layer base {
-    html, body { margin: 0; padding: 0; background-color: #FDFBF7; }
+    html, body { margin: 0; padding: 0; background-color: #FBF7F0; }
     body { overscroll-behavior: none; }
   }
   ::-webkit-scrollbar { display: none; }
@@ -26,18 +26,22 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        petroleo: '#063642',
-        menta: '#A3C8BE',
-        'menta-light': '#D6E8E2',
-        ocre: '#C1873A',
-        'ocre-light': '#F4E7D3',
-        oliva: '#434637',
-        'oliva-light': '#606450',
-        arena: '#DED7CE',
-        'arena-soft': '#F4EFEB',
-        grafito: '#1E1E1E',
-        'fondo-calido': '#FDFBF7',
-        'fondo-calido-alt': '#FAF7F2'
+        /* Paleta Manual Estratégico de Marca Motivos */
+        petroleo: '#0E4C5E',        /* azul petróleo medio — principal */
+        'petroleo-deep': '#08333F', /* footer, degradados */
+        menta: '#A1B49B',           /* verde salvia (gris-verdoso) */
+        'menta-light': '#DCE6DE',
+        'salvia-soft': '#E9EFE7',   /* fondo franja "Escúchanos en" */
+        ocre: '#C0873C',            /* oro mate */
+        'ocre-light': '#F3E6CF',
+        oliva: '#4B5A52',           /* salvia profundo — texto secundario */
+        'oliva-light': '#6B7A70',
+        arena: '#E7DCCB',           /* crema cálido medio */
+        'arena-soft': '#F3EADA',    /* crema cálido */
+        grafito: '#22201D',         /* negro cálido — texto */
+        blanco: '#FFFFFF',
+        'fondo-calido': '#FBF7F0',
+        'fondo-calido-alt': '#F7F1E6'
       },
       fontFamily: {
         bodoni: ['"Bodoni Moda"', 'serif'],
