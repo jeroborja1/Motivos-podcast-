@@ -74,29 +74,12 @@ tailwind.config = {
 <span class="font-satoshi text-[10px] tracking-[0.24em] uppercase text-oliva/80 font-semibold mt-0.5">con John Vanegas</span>
 </div>
 </a>
-<!-- Menú estricto de 4 accesos solicitados -->
-<nav class="hidden md:flex items-center gap-1.5 lg:gap-2">
-<!-- 1. Inicio -->
+<!-- Menú principal: Inicio · Podcast · Postula tu historia · Comunidad -->
+<nav class="hidden md:flex items-center gap-1 lg:gap-2">
 <a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-petroleo hover:bg-arena/50 transition-colors" href="#inicio">Inicio</a>
-<!-- 2. Postula tu historia -->
-<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-oliva hover:text-petroleo hover:bg-arena/50 transition-colors flex items-center gap-1.5" href="#convocatoria-historias">
-<span class="material-symbols-outlined text-[17px] text-ocre">record_voice_over</span>
-<span class="">Postula tu historia</span>
-</a>
-<!-- 3. YouTube directo -->
-<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-[#FF0000] hover:bg-red-50 transition-colors flex items-center gap-1.5" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">
-<svg class="w-4 h-4 text-[#FF0000] fill-current" viewBox="0 0 24 24">
-<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-</svg>
-<span class="">YouTube</span>
-</a>
-<!-- 4. Spotify directo -->
-<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-[#1DB954] hover:bg-emerald-50 transition-colors flex items-center gap-1.5" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">
-<svg class="w-4 h-4 text-[#1DB954] fill-current" viewBox="0 0 24 24">
-<path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path>
-</svg>
-<span class="">Spotify</span>
-</a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-petroleo hover:bg-arena/50 transition-colors" href="#episodios">Podcast</a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-petroleo hover:bg-arena/50 transition-colors" href="#convocatoria-historias">Postula tu historia</a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-petroleo hover:bg-arena/50 transition-colors" href="#comunidad">Comunidad</a>
 </nav>
 <!-- WhatsApp en Header -->
 <div class="flex items-center gap-3">
@@ -137,27 +120,11 @@ tailwind.config = {
 <p class="text-arena text-base md:text-lg leading-relaxed max-w-2xl font-normal">
           John Vanegas abre micrófonos para conversar con personas que atravesaron momentos decisivos y hallaron una razón para levantarse. Testimonios genuinos, sin guion, sobre resiliencia, fe y propósito que transforman vidas.
         </p>
-<!-- CTAs Principales: Spotify y YouTube LADO A LADO CON IGUAL PESO Y VISIBILIDAD -->
+<!-- CTA principal de marca (las plataformas van en la franja "Escúchanos en") -->
 <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2 w-full sm:w-auto">
-<!-- CTA 1: Escuchar en Spotify -->
-<a class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[#1DB954] hover:bg-[#1aa34a] text-white font-semibold text-base shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 group" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">
-<svg class="w-6 h-6 fill-current shrink-0 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
-<path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path>
-</svg>
-<div class="flex flex-col text-left leading-tight">
-<span class="text-[11px] uppercase tracking-wider font-semibold opacity-90">Escuchar Podcast en</span>
-<span class="font-bold text-base">Spotify Show</span>
-</div>
-</a>
-<!-- CTA 2: Ver en YouTube (MISMO PESO, VISIBILIDAD Y PRIORIDAD) -->
-<a class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-3 px-6 py-4 rounded-xl bg-[#FF0000] hover:bg-[#d90000] text-white font-semibold text-base shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 group" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">
-<svg class="w-6 h-6 fill-current shrink-0 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
-<path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
-</svg>
-<div class="flex flex-col text-left leading-tight">
-<span class="text-[11px] uppercase tracking-wider font-semibold opacity-90">Ver Capítulos en</span>
-<span class="font-bold text-base">YouTube Oficial</span>
-</div>
+<a class="inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-xl bg-ocre hover:bg-ocre/90 text-petroleo font-bold text-base shadow-lg hover:-translate-y-0.5 transition-all duration-200" href="#episodios">
+<span class="material-symbols-outlined text-[22px]">graphic_eq</span>
+<span class="">Escuchar los episodios</span>
 </a>
 </div>
 <div class="flex items-center gap-6 pt-2 text-arena/80 text-xs">
@@ -227,11 +194,11 @@ tailwind.config = {
 </div>
 <div class="flex items-center gap-2">
 <a class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs text-white flex items-center gap-1 transition-colors" href="https://open.spotify.com/episode/27m8CmsZpbSSPceB7Kz5O4" rel="noopener noreferrer" target="_blank" title="Spotify">
-<span class="material-symbols-outlined text-[15px] text-[#1DB954]">podcasts</span>
+<span class="material-symbols-outlined text-[15px] text-menta">podcasts</span>
 <span class="">Spotify</span>
 </a>
 <a class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs text-white flex items-center gap-1 transition-colors" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
-<span class="material-symbols-outlined text-[15px] text-[#FF0000]">smart_display</span>
+<span class="material-symbols-outlined text-[15px] text-menta">smart_display</span>
 <span class="">Ver Completo</span>
 </a>
 </div>
@@ -242,8 +209,24 @@ tailwind.config = {
 </div>
 </div>
 </section>
+<!-- 1B. ESCÚCHANOS EN — franja neutra de plataformas (logos monocromo, sin botones de color) -->
+<section class="w-full bg-salvia-soft border-y border-arena">
+<div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-4">
+<span class="font-satoshi text-xs uppercase tracking-[0.22em] font-bold text-oliva">Escúchanos en</span>
+<div class="flex items-center gap-10">
+<a class="flex items-center gap-2.5 text-petroleo hover:text-ocre transition-colors" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank" aria-label="Escuchar en Spotify">
+<svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path></svg>
+<span class="font-satoshi text-sm font-semibold">Spotify</span>
+</a>
+<a class="flex items-center gap-2.5 text-petroleo hover:text-ocre transition-colors" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" aria-label="Ver en YouTube">
+<svg class="w-7 h-7 fill-current shrink-0" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+<span class="font-satoshi text-sm font-semibold">YouTube</span>
+</a>
+</div>
+</div>
+</section>
 <!-- 2. PILARES DE MARCA (OVERLAP CÁLIDO) -->
-<section class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 lg:px-12 -mt-8 w-full">
+<section class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 lg:px-12 mt-12 w-full">
 <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border border-arena">
 <div class="flex items-center gap-4">
 <div class="w-12 h-12 rounded-xl bg-ocre/15 text-ocre flex items-center justify-center shrink-0">
@@ -391,10 +374,10 @@ tailwind.config = {
 <span class="material-symbols-outlined text-[18px]">play_circle</span> Escuchar
             </a>
 <div class="flex items-center gap-3 text-grafito/70">
-<a class="hover:text-[#1DB954]" href="https://open.spotify.com/episode/73MAJ3FytnmIRpMscjsXZX" rel="noopener noreferrer" target="_blank" title="Spotify">
+<a class="hover:text-ocre" href="https://open.spotify.com/episode/73MAJ3FytnmIRpMscjsXZX" rel="noopener noreferrer" target="_blank" title="Spotify">
 <span class="material-symbols-outlined text-[18px]">podcasts</span>
 </a>
-<a class="hover:text-[#FF0000]" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
+<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
 <span class="material-symbols-outlined text-[18px]">smart_display</span>
 </a>
 </div>
@@ -423,10 +406,10 @@ tailwind.config = {
 <span class="material-symbols-outlined text-[18px]">play_circle</span> Escuchar
             </a>
 <div class="flex items-center gap-3 text-grafito/70">
-<a class="hover:text-[#1DB954]" href="https://open.spotify.com/episode/3OtNIcga4Ozr0g7WSACBqC" rel="noopener noreferrer" target="_blank" title="Spotify">
+<a class="hover:text-ocre" href="https://open.spotify.com/episode/3OtNIcga4Ozr0g7WSACBqC" rel="noopener noreferrer" target="_blank" title="Spotify">
 <span class="material-symbols-outlined text-[18px]">podcasts</span>
 </a>
-<a class="hover:text-[#FF0000]" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
+<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
 <span class="material-symbols-outlined text-[18px]">smart_display</span>
 </a>
 </div>
@@ -455,10 +438,10 @@ tailwind.config = {
 <span class="material-symbols-outlined text-[18px]">play_circle</span> Escuchar
             </a>
 <div class="flex items-center gap-3 text-grafito/70">
-<a class="hover:text-[#1DB954]" href="https://open.spotify.com/episode/5qGaStyvbQdOZSeVL9eoMc" rel="noopener noreferrer" target="_blank" title="Spotify">
+<a class="hover:text-ocre" href="https://open.spotify.com/episode/5qGaStyvbQdOZSeVL9eoMc" rel="noopener noreferrer" target="_blank" title="Spotify">
 <span class="material-symbols-outlined text-[18px]">podcasts</span>
 </a>
-<a class="hover:text-[#FF0000]" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
+<a class="hover:text-ocre" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
 <span class="material-symbols-outlined text-[18px]">smart_display</span>
 </a>
 </div>
@@ -466,15 +449,11 @@ tailwind.config = {
 </div>
 </article>
 </div>
-<!-- Botones centrales directos de Spotify y YouTube -->
-<div class="flex flex-wrap items-center justify-center gap-4 pt-6">
-<a class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-petroleo hover:bg-petroleo/90 text-menta font-semibold text-sm shadow transition-all" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">
-<svg class="w-4 h-4 fill-current text-[#1DB954]" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path></svg>
-<span class="">Todos los episodios en Spotify</span>
-</a>
-<a class="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl bg-[#FF0000] hover:bg-[#d90000] text-white font-semibold text-sm shadow transition-all" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">
-<svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
-<span class="">Suscribirse al canal en YouTube</span>
+<!-- Ver todos los episodios -->
+<div class="flex items-center justify-center pt-6">
+<a class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-xl bg-petroleo hover:bg-petroleo-deep text-blanco font-semibold text-sm shadow transition-all" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">playlist_play</span>
+<span class="">Ver todos los episodios</span>
 </a>
 </div>
 </div>
@@ -508,15 +487,15 @@ tailwind.config = {
 </div>
 <!-- Descripción + botón único a YouTube -->
 <div class="p-8 md:p-12 flex flex-col justify-center gap-5">
-<div class="inline-flex items-center gap-2 w-fit px-3 py-1 rounded-full bg-red-600/20 border border-red-500/40">
-<span class="w-2 h-2 rounded-full bg-red-500"></span>
-<span class="text-[11px] uppercase tracking-widest font-bold text-white">Exclusivo de YouTube</span>
+<div class="inline-flex items-center gap-2 w-fit px-3 py-1 rounded-full bg-ocre/15 border border-ocre/40">
+<span class="w-2 h-2 rounded-full bg-ocre"></span>
+<span class="text-[11px] uppercase tracking-widest font-bold text-arena">Exclusivo de YouTube</span>
 </div>
 <h3 class="font-satoshi text-2xl md:text-3xl font-bold text-white">Onces con Motivos</h3>
 <p class="text-arena/90 text-sm md:text-base leading-relaxed">
-              Un espacio más cercano y espontáneo, con el café de por medio: cada jueves a las 11:00 AM conversamos sobre las historias que inspiran y transforman vidas. Se emite únicamente en el canal de YouTube de Motivos.
+              Un espacio más cercano y espontáneo, con el café de por medio: conversaciones sobre las historias que inspiran y transforman vidas. Se emite únicamente en el canal de YouTube de Motivos.
             </p>
-<a class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#FF0000] hover:bg-[#d90000] text-white font-bold text-base shadow-xl hover:scale-105 transition-all w-full sm:w-auto self-start" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">
+<a class="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-ocre hover:bg-ocre/90 text-petroleo font-bold text-base shadow-lg hover:-translate-y-0.5 transition-all w-full sm:w-auto self-start" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">
 <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
 </svg>
@@ -781,7 +760,7 @@ tailwind.config = {
 </section>
 <!-- 8. SECCIÓN DE COMUNIDAD EN REDES
      (Fondo elegante en Azul Petróleo #063642 con YouTube RESALTADO AL MÁXIMO en formato destacado/hero card de mayor jerarquía) -->
-<section class="w-full bg-petroleo text-white py-20 relative overflow-hidden">
+<section class="w-full bg-petroleo text-white py-20 relative overflow-hidden" id="comunidad">
 <div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 relative z-10">
 <div class="text-center max-w-2xl mx-auto mb-14">
 <span class="text-xs uppercase tracking-[0.2em] font-bold text-menta">Comunidad Oficial</span>
@@ -791,24 +770,24 @@ tailwind.config = {
       </p>
 </div>
 <!-- TARJETA DESTACADA DE YOUTUBE: MÁXIMA JERARQUÍA VISUAL (Hero Card prominente) -->
-<div class="mb-10 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-petroleo via-[#1a444f] to-grafito border-2 border-red-500 shadow-2xl relative overflow-hidden">
+<div class="mb-10 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-petroleo via-[#12586a] to-petroleo-deep border border-menta/25 shadow-2xl relative overflow-hidden">
 <!-- Glow decorativo -->
-<div class="absolute -right-20 -top-20 w-80 h-80 bg-red-600/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute -right-20 -top-20 w-80 h-80 bg-ocre/15 rounded-full blur-3xl pointer-events-none"></div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
 <div class="lg:col-span-8 flex flex-col gap-3">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-red-600/20 border border-red-500/40 w-fit">
-<span class="w-2 h-2 rounded-full bg-red-500 animate-ping"></span>
-<span class="text-[11px] uppercase tracking-widest font-bold text-white">Canal Principal de Video • Máxima Resolución</span>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-menta/12 border border-menta/30 w-fit">
+<span class="w-2 h-2 rounded-full bg-ocre"></span>
+<span class="text-[11px] uppercase tracking-widest font-bold text-arena">Canal principal de video</span>
 </div>
 <h3 class="font-satoshi text-2xl md:text-4xl text-white font-normal leading-tight">
-            Canal Oficial de YouTube <span class="text-red-400 font-semibold">@MotivosPodcast</span>
+            Canal Oficial de YouTube <span class="text-menta font-semibold">@MotivosPodcast</span>
 </h3>
 <p class="text-arena/90 text-sm md:text-base max-w-2xl leading-relaxed">
             Disfruta cada episodio con las tomas de cámara multicámara en estudio, expresiones humanas, miradas y momentos no editados que no caben en el audio. Suscríbete y activa la campana para estrenos semanales.
           </p>
 </div>
 <div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col items-start lg:items-end justify-center gap-3">
-<a class="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#FF0000] hover:bg-[#d90000] text-white font-bold text-base shadow-xl hover:scale-105 transition-all group" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">
+<a class="w-full inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-ocre hover:bg-ocre/90 text-petroleo font-bold text-base shadow-lg hover:-translate-y-0.5 transition-all group" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">
 <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
 <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
 </svg>
@@ -1005,8 +984,8 @@ tailwind.config = {
 <div class="flex items-center gap-6 text-xs text-arena/80">
 <a class="hover:text-menta transition-colors" href="#inicio">Inicio</a>
 <a class="hover:text-ocre transition-colors" href="#postula">Postula tu historia</a>
-<a class="hover:text-red-400 transition-colors" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">YouTube</a>
-<a class="hover:text-[#1DB954] transition-colors" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">Spotify</a>
+<a class="hover:text-ocre transition-colors" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">YouTube</a>
+<a class="hover:text-ocre transition-colors" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">Spotify</a>
 </div>
 <div class="text-center md:text-right text-xs text-arena/60">
 <p class="">© 2026 Motivos Podcast con John Vanegas. Todos los derechos reservados.</p>
