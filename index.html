@@ -91,38 +91,29 @@ tailwind.config = {
 </div>
 </header>
 <main class="w-full pt-20">
-<!-- 1. HERO / BIENVENIDA (Fondo en Azul Petróleo #063642 con detalles en Ocre y Menta) -->
+<!-- 1. HERO — nombre grande + foto de los hosts + recuadro "nuevo episodio" -->
 <section class="relative w-full overflow-hidden bg-petroleo text-fondo-calido" id="inicio">
-<!-- Fondo con textura sutil y acentos cromáticos de marca -->
 <div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
 <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-menta blur-3xl"></div>
-<div class="absolute top-1/2 -right-40 w-96 h-96 rounded-full bg-ocre blur-3xl"></div>
+<div class="absolute bottom-0 -right-40 w-96 h-96 rounded-full bg-ocre blur-3xl"></div>
 </div>
-<div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 lg:px-12 py-16 lg:py-24">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<!-- Columna Texto & CTAs principales -->
-<div class="lg:col-span-7 flex flex-col items-start gap-6">
-<!-- Badge Lanzamiento Oficial -->
-<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-menta/30 backdrop-blur-md">
-<span class="w-2 h-2 rounded-full bg-ocre animate-pulse"></span>
-<span class="text-xs uppercase tracking-widest font-semibold text-menta font-satoshi">Lanzamiento Oficial • Podcast Original</span>
-</div>
-<!-- Titular Gran Escala con tipografía Bodoni -->
-<h1 class="font-satoshi text-4xl sm:text-5xl lg:text-6xl font-normal leading-[1.1] tracking-tight text-white">
-          Historias reales.<br>
-<span class="italic font-normal text-menta">Motivos reales.</span>
+<div class="relative z-10 max-w-7xl mx-auto px-5 md:px-8 lg:px-12 py-14 lg:py-20">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+<!-- Columna de texto -->
+<div class="flex flex-col items-start gap-6">
+<span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] font-bold text-menta">
+<span class="w-2 h-2 rounded-full bg-ocre"></span> Podcast · Historias de vida
+</span>
+<h1 class="font-satoshi font-extrabold tracking-tight text-white leading-[0.9]">
+<span class="block text-6xl sm:text-7xl xl:text-8xl">MOTIVOS</span>
+<span class="block mt-4 text-xl sm:text-2xl font-normal text-arena">Historias reales. <span class="italic text-menta">Motivos reales.</span></span>
 </h1>
-<!-- Cita destacada de marca Bodoni -->
-<p class="font-bodoni italic text-ocre text-lg md:text-xl border-l-2 border-ocre pl-4 leading-snug">
-          "Toda historia tiene un motivo. Incluso en medio del caos, existe un propósito."
-        </p>
-<!-- Subtítulo conmovedor -->
-<p class="text-arena text-base md:text-lg leading-relaxed max-w-2xl font-normal">
-          John Vanegas abre micrófonos para conversar con personas que atravesaron momentos decisivos y hallaron una razón para levantarse. Testimonios genuinos, sin guion, sobre resiliencia, fe y propósito que transforman vidas.
-        </p>
-<!-- CTAs de plataforma en la colorimetría de Motivos (no en rojo/verde de marca) -->
-<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2 w-full sm:w-auto">
-<a class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-petroleo hover:bg-petroleo-deep text-blanco font-bold text-base shadow-lg hover:-translate-y-0.5 transition-all duration-200" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">
+<p class="text-arena/90 text-base md:text-lg leading-relaxed max-w-xl">
+              John Vanegas y Nidian Aguilar conversan con personas que atravesaron momentos decisivos y encontraron una razón para seguir. Testimonios reales, sin guion, sobre resiliencia, fe y propósito.
+            </p>
+<!-- CTAs de plataforma en la colorimetría de Motivos -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1 w-full sm:w-auto">
+<a class="inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-xl bg-petroleo-deep hover:bg-black/30 text-blanco font-bold text-base shadow-lg hover:-translate-y-0.5 transition-all duration-200 ring-1 ring-menta/25" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">
 <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"></path></svg>
 <span class="">Escuchar en Spotify</span>
 </a>
@@ -131,82 +122,23 @@ tailwind.config = {
 <span class="">Ver en YouTube</span>
 </a>
 </div>
-<div class="flex items-center gap-6 pt-2 text-arena/80 text-xs">
-<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-menta"></span> Nuevos episodios cada semana</span>
-<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-ocre"></span> 100% Sin Censura ni Guion</span>
+<!-- Recuadro "nuevo episodio" -->
+<div class="inline-flex items-center gap-3 mt-1 px-4 py-3 rounded-xl border border-menta/30 bg-white/5 backdrop-blur-sm">
+<span class="material-symbols-outlined text-menta text-[22px]">calendar_month</span>
+<div class="flex flex-col leading-tight">
+<span class="text-[11px] uppercase tracking-widest text-arena/70 font-semibold">Nuevo episodio</span>
+<span class="text-sm text-white font-semibold">Cada semana en Spotify y YouTube</span>
 </div>
 </div>
-<!-- Columna REPRODUCTOR / PREVIEW EN BUCLE DEL ÚLTIMO EPISODIO -->
-<div class="lg:col-span-5">
-<div class="bg-petroleo/80 border-2 border-menta/40 rounded-2xl p-5 md:p-6 shadow-2xl backdrop-blur-xl relative overflow-hidden">
-<!-- Badge animado Loop Preview -->
-<div class="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
-<div class="flex items-center gap-2">
-<span class="inline-flex relative h-2.5 w-2.5">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-ocre opacity-75"></span>
-<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-ocre"></span>
-</span>
-<span class="text-[11px] uppercase font-bold tracking-widest text-menta">Preview Clave en Bucle Continuo</span>
 </div>
-<span class="text-[11px] bg-white/10 px-2 py-0.5 rounded text-arena/90">Fragmento 45s</span>
-</div>
-<!-- Miniatura del episodio destacado -->
-<div class="relative rounded-xl overflow-hidden aspect-video bg-black/40 mb-4 border border-white/10">
-<img alt="Episodio 4 — Una promesa a mi papá" class="w-full h-full object-cover object-center" src="img/preview-episodio-destacado.png">
-<div class="absolute inset-0 bg-gradient-to-t from-petroleo via-transparent to-black/30"></div>
-<!-- Etiqueta sobre la foto -->
-<div class="absolute top-2.5 left-2.5 bg-petroleo/90 backdrop-blur-sm border border-menta/30 text-menta px-2.5 py-0.5 rounded text-[11px] font-semibold">
-              Episodio Destacado
-            </div>
-<!-- Waveform animado de sonido en bucle -->
-<div class="absolute bottom-3 left-4 right-4 flex items-end justify-between gap-1 h-8 bg-black/50 px-3 py-1 rounded-lg backdrop-blur-sm border border-white/10">
-<span class="text-[10px] text-menta font-mono font-bold" id="loop-timer">0:21</span>
-<div class="flex items-end gap-1 h-6 flex-1 px-3 justify-center" id="waveform-container">
-<div class="w-1 bg-ocre rounded-full wave-bar" style="animation-delay: 0.1s;"></div>
-<div class="w-1 bg-menta rounded-full wave-bar" style="animation-delay: 0.3s;"></div>
-<div class="w-1 bg-white rounded-full wave-bar" style="animation-delay: 0.2s;"></div>
-<div class="w-1 bg-ocre rounded-full wave-bar" style="animation-delay: 0.5s;"></div>
-<div class="w-1 bg-menta rounded-full wave-bar" style="animation-delay: 0.15s;"></div>
-<div class="w-1 bg-white rounded-full wave-bar" style="animation-delay: 0.4s;"></div>
-<div class="w-1 bg-ocre rounded-full wave-bar" style="animation-delay: 0.25s;"></div>
-<div class="w-1 bg-menta rounded-full wave-bar" style="animation-delay: 0.35s;"></div>
-<div class="w-1 bg-white rounded-full wave-bar" style="animation-delay: 0.1s;"></div>
-<div class="w-1 bg-ocre rounded-full wave-bar" style="animation-delay: 0.45s;"></div>
-</div>
-<span class="text-[10px] text-arena font-mono">0:45</span>
-</div>
-</div>
-<!-- Título del episodio preview -->
-<h3 class="font-satoshi text-lg text-white font-semibold leading-snug line-clamp-2 mb-1">
-            "Fui policía y renuncié por una promesa a mi papá... así transformé el rol de la mujer"
-          </h3>
-<p class="text-xs text-arena/80 line-clamp-2 mb-4">
-            Testimonio real de entrega, quiebre y renacimiento. Escucha el fragmento seleccionado en bucle interactivo.
-          </p>
-<!-- Barra interactiva de bucle y controles -->
-<div class="space-y-2">
-<!-- Barra de progreso simulando loop -->
-<div class="w-full bg-white/10 h-2 rounded-full overflow-hidden relative cursor-pointer" onclick="resetLoopProgress()">
-<div class="h-full bg-gradient-to-r from-ocre to-menta rounded-full transition-all duration-300" id="loop-progress-bar" style="width: 47.7778%;"></div>
-</div>
-<div class="flex items-center justify-between pt-2">
-<div class="flex items-center gap-2">
-<button class="w-9 h-9 rounded-full bg-menta text-petroleo hover:bg-white flex items-center justify-center transition-all shadow" id="btn-loop-play" onclick="toggleLoopPlay()">
-<span class="material-symbols-outlined text-[20px]" id="icon-loop-play">pause</span>
-</button>
-<span class="text-[11px] text-arena/90 font-medium">Bucle activo (Automático)</span>
-</div>
-<div class="flex items-center gap-2">
-<a class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs text-white flex items-center gap-1 transition-colors" href="https://open.spotify.com/episode/27m8CmsZpbSSPceB7Kz5O4" rel="noopener noreferrer" target="_blank" title="Spotify">
-<span class="material-symbols-outlined text-[15px] text-menta">podcasts</span>
-<span class="">Spotify</span>
-</a>
-<a class="px-2.5 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-xs text-white flex items-center gap-1 transition-colors" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank" title="YouTube">
-<span class="material-symbols-outlined text-[15px] text-menta">smart_display</span>
-<span class="">Ver Completo</span>
-</a>
-</div>
-</div>
+<!-- Columna de foto -->
+<div class="w-full">
+<div class="relative w-full max-w-sm mx-auto lg:max-w-md lg:ml-auto rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-2xl border border-menta/20">
+<img src="img/hosts-john-nidian.jpg" alt="John Vanegas y Nidian Aguilar, creadores de Motivos Podcast" class="w-full h-full object-cover aspect-[3/4]" loading="eager">
+<div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-petroleo/85 to-transparent"></div>
+<div class="absolute bottom-4 left-5 right-5 flex items-center justify-between gap-3">
+<span class="text-white font-satoshi font-bold text-sm leading-tight">John Vanegas<br>Nidian Aguilar</span>
+<span class="text-[10px] uppercase tracking-widest text-menta font-semibold shrink-0">Creadores</span>
 </div>
 </div>
 </div>
@@ -1000,48 +932,5 @@ tailwind.config = {
 </div>
 </div>
 </footer>
-<!-- SCRIPT MICROINTERACCIONES & PREVIEW EN BUCLE CONTINUO -->
-<script>
-  let isLoopPlaying = true;
-  let loopSeconds = 18;
-  const loopMax = 45;
 
-  const loopTimerEl = document.getElementById('loop-timer');
-  const loopProgressEl = document.getElementById('loop-progress-bar');
-  const iconLoopPlay = document.getElementById('icon-loop-play');
-  const waveBars = document.querySelectorAll('.wave-bar');
-
-  // Actualizador continuo en loop simulando el enganche de 45 segundos
-  const loopInterval = setInterval(() => {
-    if (!isLoopPlaying) return;
-
-    loopSeconds += 0.5;
-    if (loopSeconds > loopMax) {
-      loopSeconds = 0; // Reinicio automático continuo en bucle
-    }
-
-    const percentage = (loopSeconds / loopMax) * 100;
-    if (loopProgressEl) loopProgressEl.style.width = percentage + '%';
-
-    const secs = Math.floor(loopSeconds);
-    if (loopTimerEl) loopTimerEl.textContent = `0:${secs < 10 ? '0' : ''}${secs}`;
-  }, 500);
-
-  function toggleLoopPlay() {
-    isLoopPlaying = !isLoopPlaying;
-    if (isLoopPlaying) {
-      iconLoopPlay.textContent = 'pause';
-      waveBars.forEach(bar => bar.style.animationPlayState = 'running');
-    } else {
-      iconLoopPlay.textContent = 'play_arrow';
-      waveBars.forEach(bar => bar.style.animationPlayState = 'paused');
-    }
-  }
-
-  function resetLoopProgress() {
-    loopSeconds = 0;
-    if (loopProgressEl) loopProgressEl.style.width = '0%';
-    if (loopTimerEl) loopTimerEl.textContent = '0:00';
-  }
-</script>
 </body></html>
