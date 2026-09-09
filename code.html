@@ -12,13 +12,6 @@
   .font-bodoni { font-family: 'Bodoni Moda', serif; }
   .font-satoshi { font-family: 'Satoshi', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 
-  @keyframes soundWave {
-    0%, 100% { height: 6px; }
-    50% { height: 28px; }
-  }
-  .wave-bar {
-    animation: soundWave 1.2s ease-in-out infinite;
-  }
 </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -81,13 +74,23 @@ tailwind.config = {
 <a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-petroleo hover:bg-arena/50 transition-colors" href="#convocatoria-historias">Postula tu historia</a>
 <a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-petroleo hover:bg-arena/50 transition-colors" href="#comunidad">Comunidad</a>
 </nav>
-<!-- WhatsApp en Header -->
-<div class="flex items-center gap-3">
-<a class="inline-flex items-center gap-2 bg-petroleo hover:bg-petroleo/90 text-menta font-medium text-xs md:text-sm px-4 py-2.5 rounded-lg shadow-sm transition-all border border-menta/30" href="https://wa.me/" rel="noopener noreferrer" target="_blank">
+<!-- WhatsApp + botón de menú móvil -->
+<div class="flex items-center gap-2">
+<a class="inline-flex items-center gap-2 bg-petroleo hover:bg-petroleo-deep text-menta font-medium text-xs md:text-sm px-4 py-2.5 rounded-lg shadow-sm transition-all border border-menta/30" href="https://wa.me/" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">chat</span>
 <span class="hidden sm:inline">WhatsApp Motivos</span>
 </a>
+<button id="menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-petroleo hover:bg-arena/50 transition-colors" aria-label="Abrir menú" aria-expanded="false">
+<span class="material-symbols-outlined" id="menu-icon">menu</span>
+</button>
 </div>
+</div>
+<!-- Panel de menú móvil -->
+<div id="mobile-menu" class="md:hidden hidden border-t border-arena/60 bg-fondo-calido px-5 py-4 flex-col gap-1">
+<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-petroleo hover:bg-arena/50 transition-colors" href="#inicio">Inicio</a>
+<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-grafito hover:bg-arena/50 transition-colors" href="#episodios">Podcast</a>
+<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-grafito hover:bg-arena/50 transition-colors" href="#convocatoria-historias">Postula tu historia</a>
+<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-grafito hover:bg-arena/50 transition-colors" href="#comunidad">Comunidad</a>
 </div>
 </header>
 <main class="w-full pt-20">
@@ -133,7 +136,7 @@ tailwind.config = {
 </div>
 <!-- Columna de foto -->
 <div class="w-full">
-<div class="relative w-full max-w-sm mx-auto lg:max-w-md lg:ml-auto rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-2xl border border-menta/20">
+<div class="relative w-full max-w-sm mx-auto lg:max-w-md lg:ml-auto rounded-tl-[3rem] rounded-br-[3rem] rounded-tr-xl rounded-bl-xl overflow-hidden shadow-lg border border-menta/20">
 <img src="img/hosts-john-nidian.jpg" alt="John Vanegas y Nidian Aguilar, creadores de Motivos Podcast" class="w-full h-full object-cover aspect-[3/4]" loading="eager">
 <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-petroleo/85 to-transparent"></div>
 <div class="absolute bottom-4 left-5 right-5 flex items-center justify-between gap-3">
@@ -161,49 +164,8 @@ tailwind.config = {
 </div>
 </div>
 </section>
-<!-- 2. PILARES DE MARCA (OVERLAP CÁLIDO) -->
-<section class="relative z-20 max-w-7xl mx-auto px-5 md:px-8 lg:px-12 mt-12 w-full">
-<div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 border border-arena">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-ocre/15 text-ocre flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">mic</span>
-</div>
-<div>
-<h4 class="font-bold text-petroleo text-sm">100% Sin Guion</h4>
-<p class="text-xs text-oliva">Conversaciones francas y transparentes</p>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-menta/30 text-petroleo flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">volunteer_activism</span>
-</div>
-<div>
-<h4 class="font-bold text-petroleo text-sm">Fe y Propósito</h4>
-<p class="text-xs text-oliva">Resiliencia que restaura la dignidad</p>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-oliva/15 text-oliva flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">history_edu</span>
-</div>
-<div>
-<h4 class="font-bold text-petroleo text-sm">Historias Reales</h4>
-<p class="text-xs text-oliva">Gente común con lecciones heroicas</p>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-xl bg-petroleo/10 text-petroleo flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[26px]">hub</span>
-</div>
-<div>
-<h4 class="font-bold text-petroleo text-sm">Spotify &amp; YouTube</h4>
-<p class="text-xs text-oliva">Acceso gratis y multiplataforma</p>
-</div>
-</div>
-</div>
-</section>
 <!-- 3. NUESTRA HISTORIA — origen del podcast + los dos fundadores -->
-<section class="w-full bg-arena-soft py-20 border-y border-arena/60" id="nuestra-historia">
+<section class="w-full bg-arena-soft py-20" id="nuestra-historia">
 <div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex flex-col gap-14">
 <!-- Origen y propósito -->
 <div class="max-w-3xl flex flex-col gap-5">
@@ -286,13 +248,6 @@ tailwind.config = {
 <div>
 <span class="text-xs font-bold uppercase tracking-widest text-ocre">Temporada de Estreno • Temporada 01</span>
 <h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-bold">Capítulos Recientes</h2>
-</div>
-<!-- Píldoras de filtro con acento Ocre y Petróleo -->
-<div class="flex flex-wrap items-center gap-2">
-<button class="px-4 py-1.5 rounded-full text-xs font-bold bg-petroleo text-menta shadow-sm">Todos</button>
-<button class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-grafito hover:bg-arena/50 border border-arena transition-colors">Resiliencia</button>
-<button class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-grafito hover:bg-arena/50 border border-arena transition-colors">Fe y Servicio</button>
-<button class="px-4 py-1.5 rounded-full text-xs font-semibold bg-white text-grafito hover:bg-arena/50 border border-arena transition-colors">Historias Militares</button>
 </div>
 </div>
 <!-- Spotify Embed Oficial del Show -->
@@ -400,6 +355,55 @@ tailwind.config = {
 </div>
 </div>
 </section>
+<!-- 5. TESTIMONIOS DE LA COMUNIDAD -->
+<section class="w-full bg-arena-soft py-20" id="historias">
+<div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex flex-col gap-12">
+<div class="max-w-3xl">
+<span class="text-xs uppercase tracking-[0.2em] font-bold text-ocre">La comunidad</span>
+<h2 class="font-satoshi text-3xl md:text-5xl font-bold text-petroleo mt-2 leading-tight">
+          Historias que <span class="font-bodoni italic font-normal text-ocre">tocaron el alma</span>
+        </h2>
+<p class="text-oliva text-sm md:text-base mt-4">
+          No son números ni métricas de audiencia: son personas que encontraron en una conversación una razón para seguir.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<figure class="bg-white rounded-2xl p-8 shadow-sm border border-arena flex flex-col gap-5">
+<span class="material-symbols-outlined text-ocre/40 text-[40px] leading-none">format_quote</span>
+<blockquote class="font-bodoni italic text-lg text-petroleo leading-snug flex-1">Este podcast me recordó que las heridas no son el final de la historia, sino el prólogo de una misión con propósito.</blockquote>
+<figcaption class="flex items-center gap-3 pt-4 border-t border-arena/50">
+<span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">CM</span>
+<span class="flex flex-col leading-tight">
+<span class="font-bold text-sm text-petroleo">Carlos Méndez</span>
+<span class="text-xs text-oliva">Emprendedor · Medellín</span>
+</span>
+</figcaption>
+</figure>
+<figure class="bg-white rounded-2xl p-8 shadow-sm border border-arena flex flex-col gap-5">
+<span class="material-symbols-outlined text-ocre/40 text-[40px] leading-none">format_quote</span>
+<blockquote class="font-bodoni italic text-lg text-petroleo leading-snug flex-1">Escuchar Motivos me devolvió la certeza de que el dolor compartido sana a quien lo cuenta y a quien lo escucha.</blockquote>
+<figcaption class="flex items-center gap-3 pt-4 border-t border-arena/50">
+<span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">SR</span>
+<span class="flex flex-col leading-tight">
+<span class="font-bold text-sm text-petroleo">Dra. Sofía Rincón</span>
+<span class="text-xs text-oliva">Médica oncóloga · Bogotá</span>
+</span>
+</figcaption>
+</figure>
+<figure class="bg-white rounded-2xl p-8 shadow-sm border border-arena flex flex-col gap-5">
+<span class="material-symbols-outlined text-ocre/40 text-[40px] leading-none">format_quote</span>
+<blockquote class="font-bodoni italic text-lg text-petroleo leading-snug flex-1">La verdad que se siente en cada conversación es única. No hay poses ni marketing; solo personas reales.</blockquote>
+<figcaption class="flex items-center gap-3 pt-4 border-t border-arena/50">
+<span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">AV</span>
+<span class="flex flex-col leading-tight">
+<span class="font-bold text-sm text-petroleo">Andrés Valencia</span>
+<span class="text-xs text-oliva">Conferencista juvenil · Cali</span>
+</span>
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
 <!-- 4B. PROYECTOS DE MOTIVOS
      (Fondo Azul Petróleo #063642. Cada proyecto es una tarjeta; el primero, "Onces con Motivos",
       es exclusivo de YouTube, por eso su único botón redirige al canal.) -->
@@ -451,55 +455,6 @@ tailwind.config = {
 </div>
 </div>
 </section>
-<!-- 5. TESTIMONIOS DE LA COMUNIDAD -->
-<section class="w-full bg-arena-soft py-20 border-y border-arena" id="historias">
-<div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex flex-col gap-12">
-<div class="max-w-3xl">
-<span class="text-xs uppercase tracking-[0.2em] font-bold text-ocre">La comunidad</span>
-<h2 class="font-satoshi text-3xl md:text-5xl font-bold text-petroleo mt-2 leading-tight">
-          Historias que <span class="font-bodoni italic font-normal text-ocre">tocaron el alma</span>
-        </h2>
-<p class="text-oliva text-sm md:text-base mt-4">
-          No son números ni métricas de audiencia: son personas que encontraron en una conversación una razón para seguir.
-        </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<figure class="bg-white rounded-2xl p-8 shadow-sm border border-arena flex flex-col gap-5">
-<span class="material-symbols-outlined text-ocre/40 text-[40px] leading-none">format_quote</span>
-<blockquote class="font-bodoni italic text-lg text-petroleo leading-snug flex-1">Este podcast me recordó que las heridas no son el final de la historia, sino el prólogo de una misión con propósito.</blockquote>
-<figcaption class="flex items-center gap-3 pt-4 border-t border-arena/50">
-<span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">CM</span>
-<span class="flex flex-col leading-tight">
-<span class="font-bold text-sm text-petroleo">Carlos Méndez</span>
-<span class="text-xs text-oliva">Emprendedor · Medellín</span>
-</span>
-</figcaption>
-</figure>
-<figure class="bg-white rounded-2xl p-8 shadow-sm border border-arena flex flex-col gap-5">
-<span class="material-symbols-outlined text-ocre/40 text-[40px] leading-none">format_quote</span>
-<blockquote class="font-bodoni italic text-lg text-petroleo leading-snug flex-1">Escuchar Motivos me devolvió la certeza de que el dolor compartido sana a quien lo cuenta y a quien lo escucha.</blockquote>
-<figcaption class="flex items-center gap-3 pt-4 border-t border-arena/50">
-<span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">SR</span>
-<span class="flex flex-col leading-tight">
-<span class="font-bold text-sm text-petroleo">Dra. Sofía Rincón</span>
-<span class="text-xs text-oliva">Médica oncóloga · Bogotá</span>
-</span>
-</figcaption>
-</figure>
-<figure class="bg-white rounded-2xl p-8 shadow-sm border border-arena flex flex-col gap-5">
-<span class="material-symbols-outlined text-ocre/40 text-[40px] leading-none">format_quote</span>
-<blockquote class="font-bodoni italic text-lg text-petroleo leading-snug flex-1">La verdad que se siente en cada conversación es única. No hay poses ni marketing; solo personas reales.</blockquote>
-<figcaption class="flex items-center gap-3 pt-4 border-t border-arena/50">
-<span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">AV</span>
-<span class="flex flex-col leading-tight">
-<span class="font-bold text-sm text-petroleo">Andrés Valencia</span>
-<span class="text-xs text-oliva">Conferencista juvenil · Cali</span>
-</span>
-</figcaption>
-</figure>
-</div>
-</div>
-</section>
 <!-- 6. PRODUCTOS OFICIALES DEL PODCAST
      (Acento en Oliva #434637 y botones WhatsApp en armonía con la paleta de marca) -->
 <section class="w-full bg-fondo-calido py-20" id="productos">
@@ -507,7 +462,7 @@ tailwind.config = {
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
 <div>
 <span class="text-xs font-bold uppercase tracking-widest text-oliva">Identidad Tangible</span>
-<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-normal">Productos Oficiales con Propósito</h2>
+<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-bold">Productos Oficiales con Propósito</h2>
 </div>
 <p class="text-xs md:text-sm text-oliva max-w-md">
         Cada producto financia la producción independiente de nuevos testimonios de fe y resiliencia en comunidades vulnerables.
@@ -588,11 +543,11 @@ tailwind.config = {
 </section>
 <!-- 7. RECURSOS EXCLUSIVOS
      (Acento y tarjetas bordeadas con Azul Menta #A3C8BE y detalles en Ocre) -->
-<section class="w-full bg-arena-soft py-20 border-y border-arena" id="recursos">
+<section class="w-full bg-arena-soft py-20" id="recursos">
 <div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex flex-col gap-12">
 <div class="text-center max-w-xl mx-auto">
 <span class="text-xs font-bold uppercase tracking-widest text-petroleo">Herramientas &amp; Mentoría</span>
-<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-normal">Recursos Exclusivos</h2>
+<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-bold">Recursos Exclusivos</h2>
 <p class="text-xs md:text-sm text-oliva mt-2">Lleva las reflexiones del podcast a tu vida diaria, tu equipo y tu organización.</p>
 </div>
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
@@ -662,19 +617,78 @@ tailwind.config = {
 </div>
 </div>
 </section>
+<!-- 9. CONVOCATORIA HISTORIAS
+     (Fondo en Ocre #C1873A con texto en blanco/grafito) -->
+<section class="w-full bg-ocre text-white py-20" id="convocatoria-historias">
+<div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12">
+<div class="bg-white/10 border-2 border-white/30 rounded-3xl p-8 md:p-12 backdrop-blur-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+<div class="flex flex-col gap-3 max-w-2xl text-left">
+<span class="text-xs uppercase tracking-widest font-bold text-petroleo bg-white px-3 py-1 rounded-full w-fit">
+          Convocatoria Abierta • Nuevos Invitados
+        </span>
+<h3 class="font-satoshi text-2xl md:text-4xl text-white font-bold leading-snug">
+          ¿Tienes una historia de superación que el mundo deba escuchar?
+        </h3>
+<p class="text-white/90 text-sm md:text-base leading-relaxed">
+          Postula tu testimonio o el de un ser querido para los próximos capítulos. El equipo de John Vanegas evalúa cada mensaje con empatía, prudencia y absoluto respeto.
+        </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full lg:w-auto">
+<a class="w-full sm:w-auto px-8 py-4 rounded-xl bg-petroleo hover:bg-petroleo/90 text-menta font-bold text-sm tracking-wide text-center transition-all shadow-lg hover:scale-105" href="https://forms.google.com" rel="noopener noreferrer" target="_blank">
+          Postular mi historia (Formulario)
+        </a>
+<a class="w-full sm:w-auto px-6 py-4 rounded-xl bg-white hover:bg-arena text-petroleo font-bold text-sm tracking-wide text-center transition-all shadow-md" href="https://wa.me/?text=Hola%2C%20quisiera%20postular%20una%20historia%20para%20Motivos%20Podcast" rel="noopener noreferrer" target="_blank">
+          Escribir por WhatsApp
+        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- 10. DETRÁS DE MICRÓFONOS (Acento en Oliva #434637 con galería real) -->
+<section class="w-full bg-fondo-calido py-20">
+<div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex flex-col gap-12">
+<div class="text-center max-w-xl mx-auto">
+<span class="text-xs uppercase tracking-[0.2em] font-bold text-oliva">Detrás de Micrófonos</span>
+<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-bold">La Intimidad de Cada Encuentro</h2>
+<p class="text-oliva text-xs md:text-sm mt-2">La verdad de las cámaras, el silencio previo y el abrazo cuando se apaga la luz roja.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm group bg-arena">
+<img alt="Detrás de cámaras Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxgCbMCisJc6IPuhCNJQkYJHSDAuUKji7rdBl30Zl_2gzIxL2vnlJyE10CmmftqWptV7O68hS_vvquVOteof8mmbi44DwAlbjISQkrnFDtuN2LmVkI9_nR3Z7J3LaYuhW5JWel_wUUDDcLdtApExQ9j1--NHs9jN-8L1SGpapRMnulhfA-KE7OFMWikhMHQzE3nTvqB8k4g_jtG5YzHU7oOHUII48MaiIvGpjrLBs9FZXyJsTbDcCD9gHaK_jJzQ5aFXQYuTOuxCikxIc">
+<div class="absolute inset-0 bg-gradient-to-t from-petroleo/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="absolute bottom-4 left-4 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">La escucha atenta de John</span>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm group bg-arena">
+<img alt="Grabación exterior Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4bdQrgZxY5aZYgQ9f2sunOX5GlaEjfkVLbSwuEHE5RGfCx9uVXLm5ebfoQB2AlTLtG60Ug-ECN7VUZe9VB6K5pNJy1o2Be7aCO7SqTKcq5pzlh1rOP6V4bLyNr7oFXq3Xji52YbsbHPGsZQAj-tYmTPGWQEoFRDDbHe3kqfqoCdRrLxZtybsaaMg9D8nJblsVhE1CF_BqaksLNa7p_BRjfKHT4BKXTbRWO_iXEgNHpjszOQsjvzFfTMQk65gAuuqmIns">
+<div class="absolute inset-0 bg-gradient-to-t from-petroleo/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="absolute bottom-4 left-4 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">Espacios de paz y diálogo</span>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm group bg-arena">
+<img alt="Conversación profunda en estudio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLHH0o_1747kA7w05_qiX9DDNqZ5qnbjBhjOtLcg17SUJNLzmLAlGVi3LmsEmoMiZc7HFCEtmDyy_HyVf9yiwSYXZSf6fw6gHPMe_kz0BrQ-85lZ8cKVTknRj8IswhJHFlPTqNmOeyg5v_Et5MoL5TiODzuKBAMVqy08XPEOoTTD5GXFGmxzrJ_lc5cSdQ5OdISxFb4SX7_FYAeNYrNcP1qrQ2fm9iRbjr9Q5ir26byQjG-J4Ta6hoAcoMeYWm-2OaMNg">
+<div class="absolute inset-0 bg-gradient-to-t from-petroleo/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="absolute bottom-4 left-4 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">Vulnerabilidad sin máscaras</span>
+</div>
+<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm group bg-arena">
+<img alt="Estudio técnico Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzsTr_PzqMC1pRuokkc4sG_6w4bAzW6oC5rbbAvIpNF58u0vR822tz5xiL-XePfObXhpmbToiuVmrLkMQZSaDP_UDE0Ed5EwdYbqXhTeyvOGVLodh57D1ATqHpf-L-RsgcBMfPF5ifspgOZ_92BqHZuECUgO2OnplbGURus22hRIMWm7X3qPiUUN8ceF0hSnldvyBETxnPv6kI2fcL79VObXzHAjXon7sN4BL37wi5IMJRs-Nvew985fqBMNzOfqXAEXY">
+<div class="absolute inset-0 bg-gradient-to-t from-petroleo/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="absolute bottom-4 left-4 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">El santuario antes de encender micrófonos</span>
+</div>
+</div>
+</div>
+</section>
 <!-- 8. SECCIÓN DE COMUNIDAD EN REDES
      (Fondo elegante en Azul Petróleo #063642 con YouTube RESALTADO AL MÁXIMO en formato destacado/hero card de mayor jerarquía) -->
 <section class="w-full bg-petroleo text-white py-20 relative overflow-hidden" id="comunidad">
 <div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 relative z-10">
 <div class="text-center max-w-2xl mx-auto mb-14">
 <span class="text-xs uppercase tracking-[0.2em] font-bold text-menta">Comunidad Oficial</span>
-<h2 class="font-satoshi text-3xl md:text-5xl text-white mt-1 font-normal">Conéctate en Cada Plataforma</h2>
+<h2 class="font-satoshi text-3xl md:text-5xl text-white mt-1 font-bold">Conéctate en Cada Plataforma</h2>
 <p class="text-arena/80 text-sm mt-3">
         El contenido completo de video, clips íntimos y reflexiones exclusivas antes de cada estreno.
       </p>
 </div>
 <!-- TARJETA DESTACADA DE YOUTUBE: MÁXIMA JERARQUÍA VISUAL (Hero Card prominente) -->
-<div class="mb-10 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-petroleo via-[#12586a] to-petroleo-deep border border-menta/25 shadow-2xl relative overflow-hidden">
+<div class="mb-10 p-8 md:p-10 rounded-3xl bg-gradient-to-r from-petroleo via-[#12586a] to-petroleo-deep border border-menta/25 shadow-lg relative overflow-hidden">
 <!-- Glow decorativo -->
 <div class="absolute -right-20 -top-20 w-80 h-80 bg-ocre/15 rounded-full blur-3xl pointer-events-none"></div>
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
@@ -683,7 +697,7 @@ tailwind.config = {
 <span class="w-2 h-2 rounded-full bg-ocre"></span>
 <span class="text-[11px] uppercase tracking-widest font-bold text-arena">Canal principal de video</span>
 </div>
-<h3 class="font-satoshi text-2xl md:text-4xl text-white font-normal leading-tight">
+<h3 class="font-satoshi text-2xl md:text-4xl text-white font-bold leading-tight">
             Canal Oficial de YouTube <span class="text-menta font-semibold">@MotivosPodcast</span>
 </h3>
 <p class="text-arena/90 text-sm md:text-base max-w-2xl leading-relaxed">
@@ -727,65 +741,6 @@ tailwind.config = {
 </div>
 </div>
 </section>
-<!-- 9. CONVOCATORIA HISTORIAS
-     (Fondo en Ocre #C1873A con texto en blanco/grafito) -->
-<section class="w-full bg-ocre text-white py-16" id="convocatoria-historias">
-<div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12">
-<div class="bg-white/10 border-2 border-white/30 rounded-3xl p-8 md:p-12 backdrop-blur-sm flex flex-col lg:flex-row items-center justify-between gap-8">
-<div class="flex flex-col gap-3 max-w-2xl text-left">
-<span class="text-xs uppercase tracking-widest font-bold text-petroleo bg-white px-3 py-1 rounded-full w-fit">
-          Convocatoria Abierta • Nuevos Invitados
-        </span>
-<h3 class="font-satoshi text-2xl md:text-4xl text-white font-normal leading-snug">
-          ¿Tienes una historia de superación que el mundo deba escuchar?
-        </h3>
-<p class="text-white/90 text-sm md:text-base leading-relaxed">
-          Postula tu testimonio o el de un ser querido para los próximos capítulos. El equipo de John Vanegas evalúa cada mensaje con empatía, prudencia y absoluto respeto.
-        </p>
-</div>
-<div class="flex flex-col sm:flex-row items-center gap-4 shrink-0 w-full lg:w-auto">
-<a class="w-full sm:w-auto px-8 py-4 rounded-xl bg-petroleo hover:bg-petroleo/90 text-menta font-bold text-sm tracking-wide text-center transition-all shadow-lg hover:scale-105" href="https://forms.google.com" rel="noopener noreferrer" target="_blank">
-          Postular mi historia (Formulario)
-        </a>
-<a class="w-full sm:w-auto px-6 py-4 rounded-xl bg-white hover:bg-arena text-petroleo font-bold text-sm tracking-wide text-center transition-all shadow-md" href="https://wa.me/?text=Hola%2C%20quisiera%20postular%20una%20historia%20para%20Motivos%20Podcast" rel="noopener noreferrer" target="_blank">
-          Escribir por WhatsApp
-        </a>
-</div>
-</div>
-</div>
-</section>
-<!-- 10. DETRÁS DE MICRÓFONOS (Acento en Oliva #434637 con galería real) -->
-<section class="w-full bg-fondo-calido py-20 border-b border-arena">
-<div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex flex-col gap-12">
-<div class="text-center max-w-xl mx-auto">
-<span class="text-xs uppercase tracking-[0.2em] font-bold text-oliva">Detrás de Micrófonos</span>
-<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo mt-1 font-normal">La Intimidad de Cada Encuentro</h2>
-<p class="text-oliva text-xs md:text-sm mt-2">La verdad de las cámaras, el silencio previo y el abrazo cuando se apaga la luz roja.</p>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm group bg-arena">
-<img alt="Detrás de cámaras Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxgCbMCisJc6IPuhCNJQkYJHSDAuUKji7rdBl30Zl_2gzIxL2vnlJyE10CmmftqWptV7O68hS_vvquVOteof8mmbi44DwAlbjISQkrnFDtuN2LmVkI9_nR3Z7J3LaYuhW5JWel_wUUDDcLdtApExQ9j1--NHs9jN-8L1SGpapRMnulhfA-KE7OFMWikhMHQzE3nTvqB8k4g_jtG5YzHU7oOHUII48MaiIvGpjrLBs9FZXyJsTbDcCD9gHaK_jJzQ5aFXQYuTOuxCikxIc">
-<div class="absolute inset-0 bg-gradient-to-t from-petroleo/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<span class="absolute bottom-4 left-4 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">La escucha atenta de John</span>
-</div>
-<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm group bg-arena">
-<img alt="Grabación exterior Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4bdQrgZxY5aZYgQ9f2sunOX5GlaEjfkVLbSwuEHE5RGfCx9uVXLm5ebfoQB2AlTLtG60Ug-ECN7VUZe9VB6K5pNJy1o2Be7aCO7SqTKcq5pzlh1rOP6V4bLyNr7oFXq3Xji52YbsbHPGsZQAj-tYmTPGWQEoFRDDbHe3kqfqoCdRrLxZtybsaaMg9D8nJblsVhE1CF_BqaksLNa7p_BRjfKHT4BKXTbRWO_iXEgNHpjszOQsjvzFfTMQk65gAuuqmIns">
-<div class="absolute inset-0 bg-gradient-to-t from-petroleo/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<span class="absolute bottom-4 left-4 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">Espacios de paz y diálogo</span>
-</div>
-<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm group bg-arena">
-<img alt="Conversación profunda en estudio" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLHH0o_1747kA7w05_qiX9DDNqZ5qnbjBhjOtLcg17SUJNLzmLAlGVi3LmsEmoMiZc7HFCEtmDyy_HyVf9yiwSYXZSf6fw6gHPMe_kz0BrQ-85lZ8cKVTknRj8IswhJHFlPTqNmOeyg5v_Et5MoL5TiODzuKBAMVqy08XPEOoTTD5GXFGmxzrJ_lc5cSdQ5OdISxFb4SX7_FYAeNYrNcP1qrQ2fm9iRbjr9Q5ir26byQjG-J4Ta6hoAcoMeYWm-2OaMNg">
-<div class="absolute inset-0 bg-gradient-to-t from-petroleo/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<span class="absolute bottom-4 left-4 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">Vulnerabilidad sin máscaras</span>
-</div>
-<div class="relative rounded-2xl overflow-hidden aspect-[4/5] shadow-sm group bg-arena">
-<img alt="Estudio técnico Motivos Podcast" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzsTr_PzqMC1pRuokkc4sG_6w4bAzW6oC5rbbAvIpNF58u0vR822tz5xiL-XePfObXhpmbToiuVmrLkMQZSaDP_UDE0Ed5EwdYbqXhTeyvOGVLodh57D1ATqHpf-L-RsgcBMfPF5ifspgOZ_92BqHZuECUgO2OnplbGURus22hRIMWm7X3qPiUUN8ceF0hSnldvyBETxnPv6kI2fcL79VObXzHAjXon7sN4BL37wi5IMJRs-Nvew985fqBMNzOfqXAEXY">
-<div class="absolute inset-0 bg-gradient-to-t from-petroleo/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-<span class="absolute bottom-4 left-4 text-white text-xs opacity-0 group-hover:opacity-100 transition-opacity">El santuario antes de encender micrófonos</span>
-</div>
-</div>
-</div>
-</section>
 <!-- 11. NEWSLETTER & CONTACTO EDITORIAL
      (Fondo cálido Arena #DED7CE con acentos en Azul Petróleo #063642) -->
 <section class="w-full bg-arena py-20" id="contacto">
@@ -796,7 +751,7 @@ tailwind.config = {
 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-petroleo/10 text-petroleo text-xs font-bold uppercase w-fit">
           Carta Semanal • Cada Domingo
         </div>
-<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo font-normal leading-tight">
+<h2 class="font-satoshi text-3xl md:text-4xl text-petroleo font-bold leading-tight">
           Únete a la carta personal de John Vanegas.
         </h2>
 <p class="text-sm md:text-base text-oliva leading-relaxed">
@@ -860,7 +815,7 @@ tailwind.config = {
 </main>
 <!-- BOTÓN FLOTANTE PERMANENTE DE WHATSAPP (Esquina inferior derecha) -->
 <aside class="fixed bottom-6 right-6 z-40">
-<a class="group flex items-center gap-3 bg-petroleo hover:bg-petroleo/90 text-menta p-2 pr-4 rounded-full shadow-2xl border-2 border-menta transition-all duration-300 hover:scale-105" href="https://wa.me/?text=Hola%20equipo%20de%20Motivos%20Podcast%2C%20quisiera%20conversar%20con%20ustedes" rel="noopener noreferrer" target="_blank">
+<a class="group flex items-center gap-3 bg-petroleo hover:bg-petroleo/90 text-menta p-2 pr-4 rounded-full shadow-lg border-2 border-menta transition-all duration-300 hover:scale-105" href="https://wa.me/?text=Hola%20equipo%20de%20Motivos%20Podcast%2C%20quisiera%20conversar%20con%20ustedes" rel="noopener noreferrer" target="_blank">
 <div class="w-10 h-10 rounded-full bg-menta text-petroleo flex items-center justify-center font-bold">
 <span class="material-symbols-outlined text-[22px]">forum</span>
 </div>
@@ -897,4 +852,20 @@ tailwind.config = {
 </div>
 </footer>
 
+<script>
+  (function () {
+    var btn = document.getElementById('menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var icon = document.getElementById('menu-icon');
+    if (!btn || !menu) return;
+    function setOpen(open) {
+      menu.classList.toggle('hidden', !open);
+      menu.classList.toggle('flex', open);
+      icon.textContent = open ? 'close' : 'menu';
+      btn.setAttribute('aria-expanded', String(open));
+    }
+    btn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
+    menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  })();
+</script>
 </body></html>
