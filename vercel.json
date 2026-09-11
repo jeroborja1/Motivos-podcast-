@@ -6,7 +6,6 @@
     { "src": "podcast.html", "use": "@vercel/static" },
     { "src": "postula.html", "use": "@vercel/static" },
     { "src": "tienda.html", "use": "@vercel/static" },
-    { "src": "mentorias.html", "use": "@vercel/static" },
     { "src": "contacto.html", "use": "@vercel/static" },
     { "src": "img/**", "use": "@vercel/static" }
   ],
