@@ -11,9 +11,9 @@
   ::-webkit-scrollbar { display: none; }
   /* Pintado inmediato del tope de la página: Tailwind se carga por CDN y genera
      sus clases con JS, así que sin esto hay un parpadeo en blanco al abrir el sitio. */
-  header { background-color: rgba(14, 76, 94, .97); }
-  #inicio, #video { background-color: #0E4C5E; }
-  #marquee { background-color: #C0873C; }
+  header { background-color: rgba(6, 54, 66, .97); }
+  #inicio, #video { background-color: #063642; }
+  #marquee { background-color: #C1873A; }
   .font-bodoni { font-family: 'Bodoni Moda', serif; }
   .font-satoshi { font-family: 'Satoshi', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 
@@ -28,21 +28,21 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        /* Paleta Manual Estratégico de Marca Motivos */
-        petroleo: '#0E4C5E',        /* azul petróleo medio — principal */
-        'petroleo-deep': '#08333F', /* footer, degradados */
-        menta: '#B7C7B2',           /* verde salvia (gris-verdoso, con contraste sobre petróleo) */
-        'menta-light': '#DCE6DE',
-        'salvia-soft': '#E9EFE7',   /* fondo franja "Escúchanos en" */
-        ocre: '#C0873C',            /* oro mate */
-        'ocre-light': '#F3E6CF',
-        oliva: '#4B5A52',           /* salvia profundo — texto secundario */
-        'oliva-light': '#6B7A70',
-        arena: '#E7DCCB',           /* crema cálido medio */
-        'arena-soft': '#F3EADA',    /* crema cálido */
-        grafito: '#22201D',         /* negro cálido — texto */
+        /* Paleta EXACTA del Manual de Marca Motivos v1.0 (pág. 04) */
+        petroleo: '#063642',        /* Azul Petróleo — R6 G54 B66 */
+        'petroleo-deep': '#042026', /* variante más oscura (footer, degradados) — no está en el manual */
+        menta: '#A3C8BE',           /* Azul Menta — R163 G200 B190 */
+        'menta-light': '#D6E8E2',   /* tinte claro de menta — no está en el manual */
+        'salvia-soft': '#E7F0EC',   /* tinte muy pálido de menta (franja "Escúchanos en") — no está en el manual */
+        ocre: '#C1873A',            /* Ocre — R193 G135 B58 */
+        'ocre-light': '#F4E7D3',    /* tinte claro de ocre — no está en el manual */
+        oliva: '#434637',           /* Oliva — R67 G70 B55 */
+        'oliva-light': '#606450',   /* tinte claro de oliva — no está en el manual */
+        arena: '#DED7CE',           /* Arena — R222 G215 B206 */
+        'arena-soft': '#F3EADA',    /* tinte más claro que Arena, para fondos amplios — no está en el manual */
+        grafito: '#1E1E1E',         /* Grafito — R30 G30 B30 */
         blanco: '#FFFFFF',
-        'fondo-calido': '#FBF7F0',
+        'fondo-calido': '#FBF7F0',      /* fondo de página, más claro que Arena — no está en el manual */
         'fondo-calido-alt': '#F7F1E6'
       },
       fontFamily: {
@@ -64,11 +64,11 @@ tailwind.config = {
 <div class="w-10 h-10 rounded-xl bg-fondo-calido flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform shrink-0">
 <svg class="w-7 h-7" fill="none" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg">
 <!-- Isotipo Motivos: figura izquierda (ocre) -->
-<circle cx="42" cy="17" r="13" fill="#C0873C"></circle>
-<path d="M31 34Q42 27 54 32L62 104Q60 112 52 109Q46 106 45 98Z" fill="#C0873C"></path>
+<circle cx="42" cy="17" r="13" fill="#C1873A"></circle>
+<path d="M31 34Q42 27 54 32L62 104Q60 112 52 109Q46 106 45 98Z" fill="#C1873A"></path>
 <!-- figura derecha (menta) con remate curvo -->
-<circle cx="72" cy="14" r="13" fill="#B7C7B2"></circle>
-<path d="M56 32Q68 25 80 31C87 54 83 76 74 91C69 101 75 111 86 110C98 109 103 96 99 85C93 100 74 101 62 100C57 99 54 98 53 95C52 72 54 50 56 32Z" fill="#B7C7B2"></path>
+<circle cx="72" cy="14" r="13" fill="#A3C8BE"></circle>
+<path d="M56 32Q68 25 80 31C87 54 83 76 74 91C69 101 75 111 86 110C98 109 103 96 99 85C93 100 74 101 62 100C57 99 54 98 53 95C52 72 54 50 56 32Z" fill="#A3C8BE"></path>
 </svg>
 </div>
 <div class="flex flex-col">
@@ -873,10 +873,10 @@ tailwind.config = {
 <div class="flex items-center gap-3">
 <div class="w-9 h-9 rounded-lg bg-petroleo flex items-center justify-center border border-menta/30 shrink-0">
 <svg class="w-6 h-6" fill="none" viewBox="0 0 120 132">
-<circle cx="42" cy="17" r="13" fill="#C0873C"></circle>
-<path d="M31 34Q42 27 54 32L62 104Q60 112 52 109Q46 106 45 98Z" fill="#C0873C"></path>
-<circle cx="72" cy="14" r="13" fill="#B7C7B2"></circle>
-<path d="M56 32Q68 25 80 31C87 54 83 76 74 91C69 101 75 111 86 110C98 109 103 96 99 85C93 100 74 101 62 100C57 99 54 98 53 95C52 72 54 50 56 32Z" fill="#B7C7B2"></path>
+<circle cx="42" cy="17" r="13" fill="#C1873A"></circle>
+<path d="M31 34Q42 27 54 32L62 104Q60 112 52 109Q46 106 45 98Z" fill="#C1873A"></path>
+<circle cx="72" cy="14" r="13" fill="#A3C8BE"></circle>
+<path d="M56 32Q68 25 80 31C87 54 83 76 74 91C69 101 75 111 86 110C98 109 103 96 99 85C93 100 74 101 62 100C57 99 54 98 53 95C52 72 54 50 56 32Z" fill="#A3C8BE"></path>
 </svg>
 </div>
 <span class="font-satoshi font-bold text-white text-base">MOTIVOS PODCAST</span>
