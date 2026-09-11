@@ -12,6 +12,11 @@
   .font-bodoni { font-family: 'Bodoni Moda', serif; }
   .font-satoshi { font-family: 'Satoshi', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 
+  /* Franja marquee (CTA en scroll horizontal) */
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .marquee-track { width: max-content; animation: marquee 22s linear infinite; }
+  .marquee-pause:hover .marquee-track { animation-play-state: paused; }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -47,12 +52,12 @@ tailwind.config = {
 </head>
 <body class="bg-fondo-calido font-satoshi text-grafito antialiased selection:bg-menta selection:text-petroleo">
 <!-- HEADER / NAVEGACIÓN PRINCIPAL -->
-<header class="fixed top-0 w-full z-50 bg-fondo-calido/95 backdrop-blur-md border-b border-arena/60 transition-all duration-300">
+<header class="fixed top-0 w-full z-50 bg-petroleo/97 backdrop-blur-md border-b border-menta/15 transition-all duration-300">
 <div class="h-20 max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex items-center justify-between gap-4">
 <!-- Logotipo Oficial Motivos -->
 <a class="flex items-center gap-3 group" href="#inicio">
 <!-- Isotipo oficial manual: Dos figuras V encontradas en Ocre y Azul Menta -->
-<div class="w-10 h-10 rounded-xl bg-petroleo flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform shrink-0">
+<div class="w-10 h-10 rounded-xl bg-fondo-calido flex items-center justify-center shadow-sm group-hover:scale-105 transition-transform shrink-0">
 <svg class="w-7 h-7" fill="none" viewBox="0 0 120 132" xmlns="http://www.w3.org/2000/svg">
 <!-- Isotipo Motivos: figura izquierda (ocre) -->
 <circle cx="42" cy="17" r="13" fill="#C1873A"></circle>
@@ -63,33 +68,33 @@ tailwind.config = {
 </svg>
 </div>
 <div class="flex flex-col">
-<span class="font-satoshi font-bold text-xl text-petroleo tracking-tight leading-none group-hover:text-ocre transition-colors">MOTIVOS</span>
+<span class="font-satoshi font-bold text-xl text-white tracking-tight leading-none group-hover:text-menta transition-colors">MOTIVOS</span>
 </div>
 </a>
 <!-- Menú principal: Inicio · Podcast · Postula tu historia · Comunidad -->
 <nav class="hidden md:flex items-center gap-1 lg:gap-2">
-<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-petroleo hover:bg-arena/50 transition-colors" href="#inicio">Inicio</a>
-<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-petroleo hover:bg-arena/50 transition-colors" href="#episodios">Podcast</a>
-<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-petroleo hover:bg-arena/50 transition-colors" href="#convocatoria-historias">Postula tu historia</a>
-<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-grafito hover:text-petroleo hover:bg-arena/50 transition-colors" href="#comunidad">Comunidad</a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-menta bg-white/10 transition-colors" href="#inicio">Inicio</a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-arena/90 hover:text-white hover:bg-white/10 transition-colors" href="#episodios">Podcast</a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-arena/90 hover:text-white hover:bg-white/10 transition-colors" href="#convocatoria-historias">Postula tu historia</a>
+<a class="px-3.5 py-2 rounded-lg text-sm font-semibold text-arena/90 hover:text-white hover:bg-white/10 transition-colors" href="#comunidad">Comunidad</a>
 </nav>
 <!-- WhatsApp + botón de menú móvil -->
 <div class="flex items-center gap-2">
-<a class="inline-flex items-center gap-2 bg-petroleo hover:bg-petroleo-deep text-menta font-medium text-xs md:text-sm px-4 py-2.5 rounded-lg shadow-sm transition-all border border-menta/30" href="https://wa.me/573123262267" rel="noopener noreferrer" target="_blank">
+<a class="inline-flex items-center gap-2 bg-menta hover:bg-white text-petroleo font-semibold text-xs md:text-sm px-4 py-2.5 rounded-lg shadow-sm transition-all" href="https://wa.me/573123262267" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[18px]">chat</span>
 <span class="hidden sm:inline">WhatsApp Motivos</span>
 </a>
-<button id="menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-petroleo hover:bg-arena/50 transition-colors" aria-label="Abrir menú" aria-expanded="false">
+<button id="menu-btn" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg text-arena hover:bg-white/10 transition-colors" aria-label="Abrir menú" aria-expanded="false">
 <span class="material-symbols-outlined" id="menu-icon">menu</span>
 </button>
 </div>
 </div>
 <!-- Panel de menú móvil -->
-<div id="mobile-menu" class="md:hidden hidden border-t border-arena/60 bg-fondo-calido px-5 py-4 flex-col gap-1">
-<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-petroleo hover:bg-arena/50 transition-colors" href="#inicio">Inicio</a>
-<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-grafito hover:bg-arena/50 transition-colors" href="#episodios">Podcast</a>
-<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-grafito hover:bg-arena/50 transition-colors" href="#convocatoria-historias">Postula tu historia</a>
-<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-grafito hover:bg-arena/50 transition-colors" href="#comunidad">Comunidad</a>
+<div id="mobile-menu" class="md:hidden hidden border-t border-menta/15 bg-petroleo px-5 py-4 flex-col gap-1">
+<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-menta bg-white/10" href="#inicio">Inicio</a>
+<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-arena/90 hover:bg-white/10 hover:text-white transition-colors" href="#episodios">Podcast</a>
+<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-arena/90 hover:bg-white/10 hover:text-white transition-colors" href="#convocatoria-historias">Postula tu historia</a>
+<a class="px-3 py-2.5 rounded-lg text-sm font-semibold text-arena/90 hover:bg-white/10 hover:text-white transition-colors" href="#comunidad">Comunidad</a>
 </div>
 </header>
 <main class="w-full pt-20">
@@ -147,7 +152,28 @@ tailwind.config = {
 </div>
 </div>
 </section>
-<!-- 1B. ESCÚCHANOS EN — franja neutra de plataformas (logos monocromo, sin botones de color) -->
+<!-- 1B. MARQUEE — CTA principal en scroll horizontal -->
+<section class="w-full bg-ocre overflow-hidden marquee-pause">
+<a class="marquee-track flex items-center gap-10 py-3.5" href="#convocatoria-historias" aria-label="Postula tu historia">
+<span class="flex items-center gap-10 shrink-0">
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+</span>
+<span class="flex items-center gap-10 shrink-0" aria-hidden="true">
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+<span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
+</span>
+</a>
+</section>
+<!-- 1C. ESCÚCHANOS EN — franja neutra de plataformas (logos monocromo, sin botones de color) -->
 <section class="w-full bg-salvia-soft border-y border-arena">
 <div class="max-w-7xl mx-auto px-5 md:px-8 lg:px-12 py-6 flex flex-col sm:flex-row items-center justify-center gap-x-12 gap-y-4">
 <span class="font-satoshi text-xs uppercase tracking-[0.22em] font-bold text-oliva">Escúchanos en</span>
@@ -395,6 +421,7 @@ tailwind.config = {
 <span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">CM</span>
 <span class="flex flex-col leading-tight">
 <span class="font-bold text-sm text-petroleo">Carlos Méndez</span>
+<span class="text-xs font-semibold text-ocre">@carlos.mendez</span>
 <span class="text-xs text-oliva">Emprendedor · Medellín</span>
 </span>
 </figcaption>
@@ -406,6 +433,7 @@ tailwind.config = {
 <span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">SR</span>
 <span class="flex flex-col leading-tight">
 <span class="font-bold text-sm text-petroleo">Dra. Sofía Rincón</span>
+<span class="text-xs font-semibold text-ocre">@sofia.rincon</span>
 <span class="text-xs text-oliva">Médica oncóloga · Bogotá</span>
 </span>
 </figcaption>
@@ -417,6 +445,7 @@ tailwind.config = {
 <span class="w-10 h-10 rounded-full bg-menta text-petroleo font-satoshi font-bold text-sm flex items-center justify-center shrink-0">AV</span>
 <span class="flex flex-col leading-tight">
 <span class="font-bold text-sm text-petroleo">Andrés Valencia</span>
+<span class="text-xs font-semibold text-ocre">@andres.valencia</span>
 <span class="text-xs text-oliva">Conferencista juvenil · Cali</span>
 </span>
 </figcaption>
