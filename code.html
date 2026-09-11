@@ -9,6 +9,11 @@
     body { overscroll-behavior: none; }
   }
   ::-webkit-scrollbar { display: none; }
+  /* Pintado inmediato del tope de la página: Tailwind se carga por CDN y genera
+     sus clases con JS, así que sin esto hay un parpadeo en blanco al abrir el sitio. */
+  header { background-color: rgba(14, 76, 94, .97); }
+  #inicio, #video { background-color: #0E4C5E; }
+  #marquee { background-color: #C0873C; }
   .font-bodoni { font-family: 'Bodoni Moda', serif; }
   .font-satoshi { font-family: 'Satoshi', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
 
@@ -152,7 +157,7 @@ tailwind.config = {
 </div>
 </section>
 <!-- 1B. MARQUEE — CTA principal en scroll horizontal -->
-<section class="w-full bg-ocre overflow-hidden marquee-pause">
+<section class="w-full bg-ocre overflow-hidden marquee-pause" id="marquee">
 <a class="marquee-track flex items-center gap-10 py-3.5" href="#convocatoria-historias" aria-label="Postula tu historia">
 <span class="flex items-center gap-10 shrink-0">
 <span class="font-satoshi font-extrabold uppercase tracking-wide text-petroleo text-lg md:text-xl">Postula tu historia</span><span class="w-2 h-2 rounded-full bg-petroleo/50"></span>
