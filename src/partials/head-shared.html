@@ -1,0 +1,43 @@
+<link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&amp;display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<style>
+  @layer base {
+    html, body { margin: 0; padding: 0; background-color: #DED7CE; }
+    body { overscroll-behavior: none; }
+  }
+  ::-webkit-scrollbar { display: none; }
+  /* Pintado inmediato del tope de la página: Tailwind se carga por CDN y genera
+     sus clases con JS, así que sin esto hay un parpadeo en blanco al abrir el sitio. */
+  header { background-color: #063642; } /* sólido, sin opacidad: la paleta no admite tonos derivados */
+  .font-bodoni { font-family: 'Bodoni Moda', serif; }
+  .font-satoshi { font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+  /* Dropdowns del menú principal */
+  [data-dropdown-panel] { display: none; }
+  [data-dropdown-panel].open { display: block; }
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        /* Paleta EXACTA del Manual de Marca Motivos v1.0 — únicos colores permitidos */
+        petroleo: '#063642',   /* Azul Petróleo — R6 G54 B66 */
+        menta: '#A3C8BE',      /* Azul Menta — R163 G200 B190 */
+        ocre: '#C1873A',       /* Ocre — R193 G135 B58 */
+        oliva: '#434637',      /* Oliva — R67 G70 B55 */
+        arena: '#DED7CE',      /* Arena — R222 G215 B206 (fondo claro de marca; NO se usa blanco puro como fondo) */
+        grafito: '#1E1E1E',    /* Grafito — R30 G30 B30, casi solo para texto */
+        blanco: '#FFFFFF'      /* Solo como color de TEXTO sobre petróleo u oliva */
+      },
+      fontFamily: {
+        bodoni: ['"Bodoni Moda"', 'serif'],
+        satoshi: ['"Satoshi"', 'sans-serif']
+      }
+    }
+  }
+};
+</script>

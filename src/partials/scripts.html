@@ -1,0 +1,88 @@
+<script>
+(function () {
+  // --- Menú móvil (hamburguesa) ---
+  var menuBtn = document.getElementById('menu-btn');
+  var menu = document.getElementById('mobile-menu');
+  var menuIcon = document.getElementById('menu-icon');
+  if (menuBtn && menu) {
+    var setOpen = function (open) {
+      menu.classList.toggle('hidden', !open);
+      menu.classList.toggle('flex', open);
+      if (menuIcon) menuIcon.textContent = open ? 'close' : 'menu';
+      menuBtn.setAttribute('aria-expanded', String(open));
+    };
+    menuBtn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
+    menu.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () { setOpen(false); });
+    });
+  }
+
+  // --- Dropdowns del menú de escritorio (Motivos / Podcast / Tienda) ---
+  var triggers = document.querySelectorAll('[data-dropdown-trigger]');
+  function closeAllDropdowns() {
+    document.querySelectorAll('[data-dropdown-panel]').forEach(function (p) { p.classList.remove('open'); });
+    triggers.forEach(function (t) { t.setAttribute('aria-expanded', 'false'); });
+  }
+  triggers.forEach(function (trigger) {
+    var panel = trigger.parentElement.querySelector('[data-dropdown-panel]');
+    if (!panel) return;
+    trigger.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var willOpen = !panel.classList.contains('open');
+      closeAllDropdowns();
+      if (willOpen) {
+        panel.classList.add('open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+  document.addEventListener('click', closeAllDropdowns);
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeAllDropdowns(); });
+
+  // --- Acordeón del menú móvil ---
+  document.querySelectorAll('[data-accordion-trigger]').forEach(function (trigger) {
+    var panel = trigger.nextElementSibling;
+    if (!panel) return;
+    trigger.addEventListener('click', function () {
+      var open = panel.classList.toggle('flex');
+      panel.classList.toggle('hidden', !open);
+      trigger.setAttribute('aria-expanded', String(open));
+    });
+  });
+
+  // --- Enlace activo del menú según la ruta actual ---
+  var here = location.pathname.replace(/index\.html$/, '').replace(/\/$/, '') || '/';
+  document.querySelectorAll('[data-nav-link]').forEach(function (a) {
+    var href = a.getAttribute('href').replace(/\/$/, '') || '/';
+    if (href === here) {
+      a.classList.add('bg-menta', 'text-petroleo');
+    }
+  });
+
+  // --- Formulario de carta semanal: honeypot + validación ---
+  // El formulario queda construido pero DESHABILITADO (inputs/checkbox/botón con
+  // "disabled") hasta que la Política de Privacidad esté publicada. Cuando se
+  // quiten los "disabled" en el HTML, esta lógica ya está lista:
+  //  1) si el campo honeypot viene lleno, se descarta en silencio (bot).
+  //  2) exige el checkbox de consentimiento explícito (no premarcado).
+  //  3) el envío real a Brevo/Mailchimp se conecta donde dice "TODO" abajo.
+  var newsletterForm = document.getElementById('newsletter-form');
+  if (newsletterForm) {
+    newsletterForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var honeypot = newsletterForm.querySelector('[name="empresa_web"]');
+      if (honeypot && honeypot.value.trim() !== '') return; // bot: se ignora sin feedback
+      var consent = newsletterForm.querySelector('[name="consentimiento"]');
+      if (consent && !consent.checked) {
+        var consentError = document.getElementById('newsletter-consent-error');
+        if (consentError) consentError.classList.remove('hidden');
+        return;
+      }
+      // TODO: conectar con Brevo/Mailchimp (doble opt-in) antes de habilitar el formulario.
+      var success = document.getElementById('newsletter-success');
+      if (success) success.classList.remove('hidden');
+      newsletterForm.reset();
+    });
+  }
+})();
+</script>

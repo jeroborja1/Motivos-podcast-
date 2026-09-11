@@ -25,6 +25,12 @@ const MIME = {
   ".map": "application/json; charset=utf-8",
 };
 
+function send(res, filePath, data) {
+  const ext = path.extname(filePath).toLowerCase();
+  res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
+  res.end(data);
+}
+
 const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split("?")[0]);
   if (urlPath === "/") urlPath = "/index.html";
@@ -37,13 +43,20 @@ const server = http.createServer((req, res) => {
   }
 
   fs.readFile(filePath, (err, data) => {
-    if (err) {
-      res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
-      return res.end("<h1>404 - No encontrado</h1>");
+    if (!err) return send(res, filePath, data);
+
+    // Rutas limpias (como cleanUrls de Vercel): /motivos -> motivos.html
+    if (!path.extname(filePath)) {
+      const withHtml = filePath + ".html";
+      return fs.readFile(withHtml, (err2, data2) => {
+        if (!err2) return send(res, withHtml, data2);
+        res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+        res.end("<h1>404 - No encontrado</h1>");
+      });
     }
-    const ext = path.extname(filePath).toLowerCase();
-    res.writeHead(200, { "Content-Type": MIME[ext] || "application/octet-stream" });
-    res.end(data);
+
+    res.writeHead(404, { "Content-Type": "text/html; charset=utf-8" });
+    res.end("<h1>404 - No encontrado</h1>");
   });
 });
 

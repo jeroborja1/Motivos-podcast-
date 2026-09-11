@@ -2,9 +2,28 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "builds": [
     { "src": "index.html", "use": "@vercel/static" },
-    { "src": "code.html", "use": "@vercel/static" },
-    { "src": "DESIGN.md", "use": "@vercel/static" },
+    { "src": "motivos.html", "use": "@vercel/static" },
+    { "src": "podcast.html", "use": "@vercel/static" },
+    { "src": "postula.html", "use": "@vercel/static" },
+    { "src": "tienda.html", "use": "@vercel/static" },
+    { "src": "mentorias.html", "use": "@vercel/static" },
+    { "src": "contacto.html", "use": "@vercel/static" },
     { "src": "img/**", "use": "@vercel/static" }
   ],
-  "cleanUrls": true
+  "cleanUrls": true,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Strict-Transport-Security", "value": "max-age=63072000; includeSubDomains; preload" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdn.fontshare.com; img-src 'self' data:; frame-src https://open.spotify.com https://www.youtube.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'"
+        }
+      ]
+    }
+  ]
 }
