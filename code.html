@@ -14,9 +14,8 @@
 
   /* Franja marquee (CTA en scroll horizontal) */
   @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .marquee-track { width: max-content; animation: marquee 22s linear infinite; }
+  .marquee-track { width: max-content; will-change: transform; animation: marquee 14s linear infinite !important; }
   .marquee-pause:hover .marquee-track { animation-play-state: paused; }
-  @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
 </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
