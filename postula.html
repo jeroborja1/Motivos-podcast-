@@ -47,12 +47,12 @@ tailwind.config = {
 </script>
 
 </head>
-<body class="bg-menta font-satoshi font-medium text-petroleo antialiased selection:bg-petroleo selection:text-menta">
+<body class="bg-arena font-satoshi font-medium text-grafito antialiased selection:bg-menta selection:text-petroleo">
 <header class="fixed top-0 w-full z-50 bg-petroleo border-b border-menta transition-all duration-300">
 <div class="h-20 max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex items-center justify-between gap-4">
 <!-- Logotipo Oficial Motivos — versión negativa (blanco sobre petróleo) -->
 <a class="flex items-center gap-2.5 group" href="/">
-<img src="/img/logo-icon-light.png" alt="" class="h-9 w-auto shrink-0 group-hover:scale-105 transition-transform" aria-hidden="true">
+<img src="/img/logo-icon.png" alt="" class="h-9 w-auto shrink-0 group-hover:scale-105 transition-transform" aria-hidden="true">
 <div class="flex flex-col">
 <span class="font-satoshi font-black text-xl text-blanco tracking-tight leading-none">MOTIVOS</span>
 <span class="font-satoshi text-[9px] tracking-[0.22em] uppercase text-menta font-bold mt-0.5">Vidas reales · Un propósito</span>
@@ -140,12 +140,13 @@ Podcast <span class="material-symbols-outlined text-[18px]">expand_more</span>
 
 <main class="w-full pt-20">
 
-<section class="w-full bg-menta text-petroleo py-20">
+<!-- Fondo petróleo: el logo oficial no lee bien sobre menta -->
+<section class="w-full bg-petroleo text-blanco py-20">
 <div class="max-w-4xl mx-auto px-5 md:px-8 lg:px-12 flex flex-col items-center text-center gap-6">
-<img src="/img/logo-icon-dark.png" alt="" class="h-14 w-auto" aria-hidden="true">
-<span class="font-satoshi text-xs font-black uppercase tracking-widest">Convocatoria abierta</span>
+<img src="/img/logo-icon.png" alt="" class="h-14 w-auto" aria-hidden="true">
+<span class="font-satoshi text-xs font-black uppercase tracking-widest text-menta">Convocatoria abierta</span>
 <h1 class="font-satoshi text-4xl md:text-5xl font-black uppercase leading-tight">¿Tienes una historia que el mundo deba escuchar?</h1>
-<p class="text-base md:text-lg max-w-2xl">
+<p class="text-arena text-base md:text-lg max-w-2xl">
 Postula tu testimonio o el de un ser querido para los próximos capítulos de Motivos. El equipo evalúa cada mensaje con empatía, prudencia y absoluto respeto — y te contactamos solo si tu historia avanza en el proceso.
 </p>
 </div>
@@ -198,7 +199,7 @@ Escribir por WhatsApp
 <!-- Marca -->
 <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
 <div class="flex items-center gap-2.5">
-<img src="/img/logo-icon-light.png" alt="" class="h-8 w-auto shrink-0" aria-hidden="true">
+<img src="/img/logo-icon.png" alt="" class="h-8 w-auto shrink-0" aria-hidden="true">
 <span class="font-satoshi font-black text-blanco text-base">MOTIVOS</span>
 </div>
 <p class="text-xs text-arena leading-relaxed max-w-[220px]">Vidas reales · Un propósito.</p>
