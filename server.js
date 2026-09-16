@@ -35,9 +35,11 @@ const server = http.createServer((req, res) => {
   let urlPath = decodeURIComponent(req.url.split("?")[0]);
   if (urlPath === "/") urlPath = "/index.html";
 
-  // Evita traversal fuera de ROOT.
+  // Evita traversal fuera de ROOT (comparación por límite de directorio real,
+  // no por prefijo de string: "ROOT-evil" no debe pasar como si fuera "ROOT").
   const filePath = path.normalize(path.join(ROOT, urlPath));
-  if (!filePath.startsWith(ROOT)) {
+  const relative = path.relative(ROOT, filePath);
+  if (relative.startsWith("..") || path.isAbsolute(relative)) {
     res.writeHead(403);
     return res.end("Forbidden");
   }
