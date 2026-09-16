@@ -9,7 +9,8 @@
     { "src": "contacto.html", "use": "@vercel/static" },
     { "src": "terminos.html", "use": "@vercel/static" },
     { "src": "privacidad.html", "use": "@vercel/static" },
-    { "src": "img/**", "use": "@vercel/static" }
+    { "src": "img/**", "use": "@vercel/static" },
+        { "src": "ads.txt", "use": "@vercel/static" }
   ],
   "cleanUrls": true,
   "headers": [
