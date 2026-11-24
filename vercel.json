@@ -14,6 +14,7 @@
     { "src": "comunidad.html", "use": "@vercel/static" },
     { "src": "alianzas.html", "use": "@vercel/static" },
     { "src": "medios.html", "use": "@vercel/static" },
+    { "src": "podcast/**", "use": "@vercel/static" },
     { "src": "img/**", "use": "@vercel/static" },
     { "src": "ads.txt", "use": "@vercel/static" }
   ],
