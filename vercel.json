@@ -9,8 +9,13 @@
     { "src": "contacto.html", "use": "@vercel/static" },
     { "src": "terminos.html", "use": "@vercel/static" },
     { "src": "privacidad.html", "use": "@vercel/static" },
+    { "src": "embajadores.html", "use": "@vercel/static" },
+    { "src": "retos.html", "use": "@vercel/static" },
+    { "src": "comunidad.html", "use": "@vercel/static" },
+    { "src": "alianzas.html", "use": "@vercel/static" },
+    { "src": "medios.html", "use": "@vercel/static" },
     { "src": "img/**", "use": "@vercel/static" },
-        { "src": "ads.txt", "use": "@vercel/static" }
+    { "src": "ads.txt", "use": "@vercel/static" }
   ],
   "cleanUrls": true,
   "headers": [
