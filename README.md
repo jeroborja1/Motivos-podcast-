@@ -1,6 +1,6 @@
 # Motivos — sitio web
 
-Motivos es una marca de historias reales: podcast, Fundación Motivos V.N., mentorías y productos con propósito. *Vidas reales · Un propósito.*
+Motivos es una marca de historias reales: podcast, Fundación Motivos V.N. y productos con propósito. *Vidas reales · Un propósito.*
 
 ## Arquitectura
 

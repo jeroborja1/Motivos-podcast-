@@ -1,7 +1,7 @@
 <!DOCTYPE html><html class="scroll-smooth" lang="es"><head><meta charset="utf-8">
-<title>Tienda — Próximamente | Motivos</title>
+<title>MOTIVOS Lifestyle — Próximamente | Motivos</title>
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta name="description" content="La tienda oficial de Motivos está en preparación. Muy pronto.">
+<meta name="description" content="MOTIVOS Lifestyle: camisetas, buzos y gorras que expresan autenticidad, respeto y propósito. Próximamente.">
 <link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,600&amp;display=swap" rel="stylesheet">
 <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
@@ -21,6 +21,9 @@
   /* Dropdowns del menú principal */
   [data-dropdown-panel] { display: none; }
   [data-dropdown-panel].open { display: block; }
+
+  /* Evita que el header fijo tape el título de la sección al navegar a un ancla (#id) */
+  section[id] { scroll-margin-top: 84px; }
 </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
@@ -49,7 +52,7 @@ tailwind.config = {
 </head>
 <body class="bg-arena font-satoshi font-medium text-grafito antialiased selection:bg-menta selection:text-petroleo">
 <header class="fixed top-0 w-full z-50 bg-petroleo border-b border-menta transition-all duration-300">
-<div class="h-20 max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex items-center justify-between gap-4">
+<div class="h-[72px] max-w-7xl mx-auto px-5 md:px-8 lg:px-12 flex items-center justify-between gap-4">
 <!-- Logotipo Oficial Motivos — versión negativa (blanco sobre petróleo) -->
 <a class="flex items-center gap-2.5 group" href="/">
 <img src="/img/logo-icon.png" alt="" class="h-9 w-auto shrink-0 group-hover:scale-105 transition-transform" aria-hidden="true">
@@ -58,20 +61,20 @@ tailwind.config = {
 <span class="font-satoshi text-[9px] tracking-[0.22em] uppercase text-menta font-bold mt-0.5">Vidas reales · Un propósito</span>
 </div>
 </a>
-<!-- Menú principal: Inicio · Motivos▾ · Podcast▾ · Postula · Tienda▾ · Contacto -->
+<!-- Menú principal: Inicio · Nosotros▾ · Podcast▾ · Comunidad▾ · Alianzas · Tienda · Contacto -->
 <nav class="hidden lg:flex items-center gap-0.5">
 <a class="px-3 py-2 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/" data-nav-link>Inicio</a>
 
 <div class="relative">
 <button class="px-3 py-2 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors inline-flex items-center gap-1" data-dropdown-trigger aria-haspopup="true" aria-expanded="false">
-Motivos <span class="material-symbols-outlined text-[18px]">expand_more</span>
+Nosotros <span class="material-symbols-outlined text-[18px]">expand_more</span>
 </button>
 <div class="absolute left-0 top-full mt-1 w-64 rounded-xl bg-petroleo border border-menta shadow-lg p-2" data-dropdown-panel>
-<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#nuestra-historia">Nuestra historia</a>
+<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#nuestra-historia">Nuestra esencia</a>
 <a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#john-y-nidian">Cofundadores</a>
-<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#mision-vision">Misión y Valores</a>
-<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#fundacion">Fundación Motivos V.N.</a>
-<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#conferencias">Conferencias con John Vanegas</a>
+<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#mision-vision">Misión, visión y valores</a>
+<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#fundacion">Fundación</a>
+<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/motivos#conferencias">Conferencias</a>
 </div>
 </div>
 
@@ -80,8 +83,8 @@ Motivos <span class="material-symbols-outlined text-[18px]">expand_more</span>
 Podcast <span class="material-symbols-outlined text-[18px]">expand_more</span>
 </button>
 <div class="absolute left-0 top-full mt-1 w-64 rounded-xl bg-petroleo border border-menta shadow-lg p-2" data-dropdown-panel>
-<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/podcast#episodios">Episodios</a>
-<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/podcast#onces">Onces con Motivos</a>
+<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/podcast#episodios">Todos los episodios</a>
+<a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="/podcast#construyendo">Construyendo MOTIVOS</a>
 <a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">YouTube ↗</a>
 <a class="block px-3 py-2.5 rounded-lg text-sm font-semibold text-arena hover:bg-menta hover:text-petroleo transition-colors" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">Spotify ↗</a>
 </div>
@@ -101,6 +104,8 @@ Comunidad <span class="material-symbols-outlined text-[18px]">expand_more</span>
 <a class="px-3 py-2 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/alianzas" data-nav-link>Alianzas</a>
 
 <a class="px-3 py-2 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/postula" data-nav-link>Postula</a>
+
+<a class="px-3 py-2 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/medios" data-nav-link>Medios</a>
 
 <a class="px-3 py-2 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/tienda" data-nav-link>Tienda</a>
 
@@ -122,22 +127,22 @@ Comunidad <span class="material-symbols-outlined text-[18px]">expand_more</span>
 <a class="px-3 py-2.5 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/">Inicio</a>
 
 <button class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" data-accordion-trigger aria-expanded="false">
-Motivos <span class="material-symbols-outlined text-[18px]">expand_more</span>
+Nosotros <span class="material-symbols-outlined text-[18px]">expand_more</span>
 </button>
 <div class="pl-4 hidden flex-col gap-1" data-accordion-panel>
-<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#nuestra-historia">Nuestra historia</a>
+<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#nuestra-historia">Nuestra esencia</a>
 <a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#john-y-nidian">Cofundadores</a>
-<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#mision-vision">Misión y Valores</a>
-<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#fundacion">Fundación Motivos V.N.</a>
-<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#conferencias">Conferencias con John Vanegas</a>
+<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#mision-vision">Misión, visión y valores</a>
+<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#fundacion">Fundación</a>
+<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/motivos#conferencias">Conferencias</a>
 </div>
 
 <button class="w-full flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" data-accordion-trigger aria-expanded="false">
 Podcast <span class="material-symbols-outlined text-[18px]">expand_more</span>
 </button>
 <div class="pl-4 hidden flex-col gap-1" data-accordion-panel>
-<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/podcast#episodios">Episodios</a>
-<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/podcast#onces">Onces con Motivos</a>
+<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/podcast#episodios">Todos los episodios</a>
+<a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="/podcast#construyendo">Construyendo MOTIVOS</a>
 <a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="https://www.youtube.com/@MotivosPodcast" rel="noopener noreferrer" target="_blank">YouTube ↗</a>
 <a class="block px-3 py-2 rounded-lg text-sm text-arena hover:text-menta transition-colors" href="https://open.spotify.com/show/3bzIpZowzU4c7jZOxtz2AS" rel="noopener noreferrer" target="_blank">Spotify ↗</a>
 </div>
@@ -155,6 +160,8 @@ Comunidad <span class="material-symbols-outlined text-[18px]">expand_more</span>
 
 <a class="px-3 py-2.5 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/postula">Postula</a>
 
+<a class="px-3 py-2.5 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/medios">Medios</a>
+
 <a class="px-3 py-2.5 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/tienda">Tienda</a>
 
 <a class="px-3 py-2.5 rounded-lg text-sm font-bold text-blanco hover:bg-menta hover:text-petroleo transition-colors" href="/contacto">Contacto</a>
@@ -164,19 +171,19 @@ Comunidad <span class="material-symbols-outlined text-[18px]">expand_more</span>
 </div>
 </header>
 
-<main class="w-full pt-20">
+<main class="w-full pt-[72px]">
 
 <section class="w-full bg-petroleo text-blanco py-24 md:py-32">
 <div class="max-w-3xl mx-auto px-5 md:px-8 lg:px-12 flex flex-col items-start gap-6">
 <span class="material-symbols-outlined text-ocre text-[48px]">storefront</span>
-<span class="font-satoshi text-xs font-black uppercase tracking-[0.2em] text-menta">Identidad tangible</span>
+<span class="font-satoshi text-xs font-black uppercase tracking-[0.2em] text-menta">MOTIVOS Lifestyle</span>
 <h1 class="font-satoshi text-4xl md:text-6xl font-black uppercase leading-[1.05]">
-Tienda <span class="text-menta">próximamente</span>
+Lleva contigo <span class="text-menta">lo que crees</span>
 </h1>
-<p class="font-bodoni italic text-xl md:text-2xl text-arena">"Cada producto tiene un motivo"</p>
 <p class="text-arena text-sm md:text-base leading-relaxed max-w-xl">
-Estamos preparando productos oficiales de Motivos, pensados para financiar nuevos testimonios de fe y resiliencia. Muy pronto podrás conseguirlos aquí.
+MOTIVOS Lifestyle nace como una manera de expresar los valores que nos acompañan: autenticidad, respeto y propósito. Piezas pensadas para quienes encuentran en las historias reales una forma de conectar con la vida.
 </p>
+<p class="font-satoshi text-xs font-black uppercase tracking-[0.2em] text-ocre">Próximamente</p>
 <a class="inline-flex items-center gap-2.5 px-7 py-4 rounded-xl bg-menta text-petroleo font-black text-base hover:bg-arena transition-colors" href="https://wa.me/573123262267?text=Hola%2C%20quisiera%20que%20me%20avisen%20cuando%20abra%20la%20tienda%20de%20Motivos" rel="noopener noreferrer" target="_blank">
 <span class="material-symbols-outlined text-[22px]">notifications</span>
 <span>Avísenme por WhatsApp</span>
@@ -184,13 +191,13 @@ Estamos preparando productos oficiales de Motivos, pensados para financiar nuevo
 </div>
 </section>
 </main>
-<!-- BOTÓN FLOTANTE PERMANENTE DE WHATSAPP -->
-<aside class="fixed bottom-6 right-6 z-40">
-<a class="group flex items-center gap-3 bg-petroleo text-blanco p-2 pr-4 rounded-full shadow-lg border-2 border-menta hover:bg-oliva transition-all duration-300 hover:scale-105" href="https://wa.me/573123262267?text=Hola%20equipo%20de%20Motivos%2C%20quisiera%20conversar%20con%20ustedes" rel="noopener noreferrer" target="_blank">
-<div class="w-10 h-10 rounded-full bg-menta text-petroleo flex items-center justify-center font-bold">
-<span class="material-symbols-outlined text-[22px]">forum</span>
+<!-- BOTÓN FLOTANTE PERMANENTE DE WHATSAPP: icono compacto en móvil para no tapar contenido -->
+<aside id="whatsapp-float" class="fixed bottom-5 right-5 z-40">
+<a class="group flex items-center gap-3 bg-petroleo text-blanco p-1.5 sm:p-2 sm:pr-4 rounded-full shadow-lg border-2 border-menta hover:bg-oliva transition-all duration-300 hover:scale-105" href="https://wa.me/573123262267?text=Hola%20equipo%20de%20Motivos%2C%20quisiera%20conversar%20con%20ustedes" rel="noopener noreferrer" target="_blank" aria-label="Escribir a Motivos por WhatsApp">
+<div class="w-12 h-12 sm:w-10 sm:h-10 rounded-full bg-menta text-petroleo flex items-center justify-center font-bold shrink-0">
+<span class="material-symbols-outlined text-[24px] sm:text-[22px]">forum</span>
 </div>
-<div class="flex flex-col text-left"><span class="text-[10px] uppercase tracking-wider text-menta font-bold">WhatsApp Oficial</span><span class="text-xs font-semibold text-blanco">Escribir a Motivos</span></div>
+<div class="hidden sm:flex flex-col text-left"><span class="text-[10px] uppercase tracking-wider text-menta font-bold">WhatsApp Oficial</span><span class="text-xs font-semibold text-blanco">Escribir a Motivos</span></div>
 </a>
 </aside>
 
@@ -204,7 +211,7 @@ Estamos preparando productos oficiales de Motivos, pensados para financiar nuevo
 <img src="/img/logo-icon.png" alt="" class="h-8 w-auto shrink-0" aria-hidden="true">
 <span class="font-satoshi font-black text-blanco text-base">MOTIVOS</span>
 </div>
-<p class="text-xs text-arena leading-relaxed max-w-[220px]">Vidas reales · Un propósito.</p>
+<p class="text-xs text-arena leading-relaxed max-w-[220px]">MOTIVOS – Vidas Reales, Un Propósito.<br>Todas las historias importan.<br>De Colombia para el mundo.</p>
 </div>
 <!-- Explorar -->
 <div class="flex flex-col gap-3">
@@ -254,7 +261,7 @@ Estamos preparando productos oficiales de Motivos, pensados para financiar nuevo
 </div>
 <div class="mt-12 pt-6 border-t border-oliva flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-arena">
 <p>© 2026 Motivos. Todos los derechos reservados.</p>
-<p>John Vanegas · Nidian Aguilar</p>
+<p>John Jairo Vanegas y Nidian Aguilar Sáenz.</p>
 </div>
 </div>
 </footer>
@@ -265,12 +272,15 @@ Estamos preparando productos oficiales de Motivos, pensados para financiar nuevo
   var menuBtn = document.getElementById('menu-btn');
   var menu = document.getElementById('mobile-menu');
   var menuIcon = document.getElementById('menu-icon');
+  var whatsappFloat = document.getElementById('whatsapp-float');
   if (menuBtn && menu) {
     var setOpen = function (open) {
       menu.classList.toggle('hidden', !open);
       menu.classList.toggle('flex', open);
       if (menuIcon) menuIcon.textContent = open ? 'close' : 'menu';
       menuBtn.setAttribute('aria-expanded', String(open));
+      // El botón flotante de WhatsApp se oculta mientras el menú móvil está abierto para no tapar los enlaces.
+      if (whatsappFloat) whatsappFloat.hidden = open;
     };
     menuBtn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
     menu.querySelectorAll('a').forEach(function (a) {

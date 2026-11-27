@@ -17,6 +17,9 @@
   /* Dropdowns del menú principal */
   [data-dropdown-panel] { display: none; }
   [data-dropdown-panel].open { display: block; }
+
+  /* Evita que el header fijo tape el título de la sección al navegar a un ancla (#id) */
+  section[id] { scroll-margin-top: 84px; }
 </style>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">

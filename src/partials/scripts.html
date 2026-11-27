@@ -4,12 +4,15 @@
   var menuBtn = document.getElementById('menu-btn');
   var menu = document.getElementById('mobile-menu');
   var menuIcon = document.getElementById('menu-icon');
+  var whatsappFloat = document.getElementById('whatsapp-float');
   if (menuBtn && menu) {
     var setOpen = function (open) {
       menu.classList.toggle('hidden', !open);
       menu.classList.toggle('flex', open);
       if (menuIcon) menuIcon.textContent = open ? 'close' : 'menu';
       menuBtn.setAttribute('aria-expanded', String(open));
+      // El botón flotante de WhatsApp se oculta mientras el menú móvil está abierto para no tapar los enlaces.
+      if (whatsappFloat) whatsappFloat.hidden = open;
     };
     menuBtn.addEventListener('click', function () { setOpen(menu.classList.contains('hidden')); });
     menu.querySelectorAll('a').forEach(function (a) {
